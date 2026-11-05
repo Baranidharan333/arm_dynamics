@@ -1,0 +1,86 @@
+[0.922s] Invoking command in '/home/baranidharan/gravity/src/analyzer': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/baranidharan/gravity/build/joint_analyzer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/joint_analyzer build --build-base /home/baranidharan/gravity/build/joint_analyzer/build install --record /home/baranidharan/gravity/build/joint_analyzer/install.log --install-scripts $base/lib/joint_analyzer --single-version-externally-managed install_data
+[1.161s] running egg_info
+[1.161s] creating ../../build/joint_analyzer/joint_analyzer.egg-info
+[1.179s] writing ../../build/joint_analyzer/joint_analyzer.egg-info/PKG-INFO
+[1.179s] writing dependency_links to ../../build/joint_analyzer/joint_analyzer.egg-info/dependency_links.txt
+[1.179s] writing entry points to ../../build/joint_analyzer/joint_analyzer.egg-info/entry_points.txt
+[1.179s] writing requirements to ../../build/joint_analyzer/joint_analyzer.egg-info/requires.txt
+[1.179s] writing top-level names to ../../build/joint_analyzer/joint_analyzer.egg-info/top_level.txt
+[1.179s] writing manifest file '../../build/joint_analyzer/joint_analyzer.egg-info/SOURCES.txt'
+[1.217s] reading manifest file '../../build/joint_analyzer/joint_analyzer.egg-info/SOURCES.txt'
+[1.218s] writing manifest file '../../build/joint_analyzer/joint_analyzer.egg-info/SOURCES.txt'
+[1.218s] running build
+[1.218s] running build_py
+[1.218s] creating /home/baranidharan/gravity/build/joint_analyzer/build
+[1.218s] creating /home/baranidharan/gravity/build/joint_analyzer/build/lib
+[1.218s] creating /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer
+[1.218s] copying joint_analyzer/ros_interface.py -> /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer
+[1.219s] copying joint_analyzer/check_diffs.py -> /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer
+[1.219s] copying joint_analyzer/server.py -> /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer
+[1.219s] copying joint_analyzer/verify_mapping.py -> /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer
+[1.219s] copying joint_analyzer/__init__.py -> /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer
+[1.219s] copying joint_analyzer/diagnose_qos.py -> /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer
+[1.219s] copying joint_analyzer/plot_server.py -> /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer
+[1.219s] copying joint_analyzer/utils.py -> /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer
+[1.219s] copying joint_analyzer/recorder.py -> /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer
+[1.219s] creating /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/templates
+[1.220s] copying joint_analyzer/templates/__init__.py -> /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/templates
+[1.220s] creating /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/static
+[1.220s] copying joint_analyzer/static/__init__.py -> /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/static
+[1.220s] copying joint_analyzer/templates/plot.html -> /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/templates
+[1.220s] copying joint_analyzer/templates/index.html -> /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/templates
+[1.220s] copying joint_analyzer/static/plot.js -> /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/static
+[1.220s] copying joint_analyzer/static/app.js -> /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/static
+[1.220s] copying joint_analyzer/static/plot.css -> /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/static
+[1.220s] copying joint_analyzer/static/style.css -> /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/static
+[1.221s] running install
+[1.226s] running install_lib
+[1.244s] creating /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer
+[1.244s] copying /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/ros_interface.py -> /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer
+[1.244s] copying /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/check_diffs.py -> /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer
+[1.244s] copying /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/server.py -> /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer
+[1.244s] creating /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/static
+[1.244s] copying /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/static/plot.js -> /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/static
+[1.244s] copying /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/static/plot.css -> /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/static
+[1.245s] copying /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/static/__init__.py -> /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/static
+[1.245s] copying /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/static/app.js -> /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/static
+[1.245s] copying /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/static/style.css -> /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/static
+[1.245s] copying /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/verify_mapping.py -> /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer
+[1.245s] copying /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/__init__.py -> /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer
+[1.245s] copying /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/diagnose_qos.py -> /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer
+[1.245s] creating /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/templates
+[1.246s] copying /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/templates/plot.html -> /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/templates
+[1.246s] copying /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/templates/__init__.py -> /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/templates
+[1.246s] copying /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/templates/index.html -> /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/templates
+[1.246s] copying /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/plot_server.py -> /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer
+[1.246s] copying /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/utils.py -> /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer
+[1.246s] copying /home/baranidharan/gravity/build/joint_analyzer/build/lib/joint_analyzer/recorder.py -> /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer
+[1.246s] byte-compiling /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/ros_interface.py to ros_interface.cpython-312.pyc
+[1.248s] byte-compiling /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/check_diffs.py to check_diffs.cpython-312.pyc
+[1.249s] byte-compiling /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/server.py to server.cpython-312.pyc
+[1.250s] byte-compiling /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/static/__init__.py to __init__.cpython-312.pyc
+[1.250s] byte-compiling /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/verify_mapping.py to verify_mapping.cpython-312.pyc
+[1.251s] byte-compiling /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/__init__.py to __init__.cpython-312.pyc
+[1.252s] byte-compiling /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/diagnose_qos.py to diagnose_qos.cpython-312.pyc
+[1.252s] byte-compiling /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/templates/__init__.py to __init__.cpython-312.pyc
+[1.252s] byte-compiling /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/plot_server.py to plot_server.cpython-312.pyc
+[1.254s] byte-compiling /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/utils.py to utils.cpython-312.pyc
+[1.255s] byte-compiling /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer/recorder.py to recorder.cpython-312.pyc
+[1.255s] running install_data
+[1.255s] creating /home/baranidharan/gravity/install/joint_analyzer/share/ament_index
+[1.256s] creating /home/baranidharan/gravity/install/joint_analyzer/share/ament_index/resource_index
+[1.256s] creating /home/baranidharan/gravity/install/joint_analyzer/share/ament_index/resource_index/packages
+[1.256s] copying resource/joint_analyzer -> /home/baranidharan/gravity/install/joint_analyzer/share/ament_index/resource_index/packages
+[1.256s] copying package.xml -> /home/baranidharan/gravity/install/joint_analyzer/share/joint_analyzer
+[1.256s] creating /home/baranidharan/gravity/install/joint_analyzer/share/joint_analyzer/launch
+[1.256s] copying launch/joint_analyzer.launch.py -> /home/baranidharan/gravity/install/joint_analyzer/share/joint_analyzer/launch
+[1.256s] running install_egg_info
+[1.277s] Copying ../../build/joint_analyzer/joint_analyzer.egg-info to /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer-0.0.1-py3.12.egg-info
+[1.277s] running install_scripts
+[1.398s] Installing check_diffs script to /home/baranidharan/gravity/install/joint_analyzer/lib/joint_analyzer
+[1.398s] Installing diagnose_qos script to /home/baranidharan/gravity/install/joint_analyzer/lib/joint_analyzer
+[1.398s] Installing plot_server script to /home/baranidharan/gravity/install/joint_analyzer/lib/joint_analyzer
+[1.399s] Installing server script to /home/baranidharan/gravity/install/joint_analyzer/lib/joint_analyzer
+[1.399s] Installing verify_mapping script to /home/baranidharan/gravity/install/joint_analyzer/lib/joint_analyzer
+[1.399s] writing list of installed files to '/home/baranidharan/gravity/build/joint_analyzer/install.log'
+[1.424s] Invoked command in '/home/baranidharan/gravity/src/analyzer' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/baranidharan/gravity/build/joint_analyzer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/joint_analyzer build --build-base /home/baranidharan/gravity/build/joint_analyzer/build install --record /home/baranidharan/gravity/build/joint_analyzer/install.log --install-scripts $base/lib/joint_analyzer --single-version-externally-managed install_data

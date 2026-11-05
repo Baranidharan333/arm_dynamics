@@ -1,0 +1,192 @@
+[0.000000] (-) TimerEvent: {}
+[0.000562] (-) JobUnselected: {'identifier': 'gravity_compensation'}
+[0.000595] (-) JobUnselected: {'identifier': 'gravity_test'}
+[0.000616] (-) JobUnselected: {'identifier': 'hw_interface'}
+[0.000633] (-) JobUnselected: {'identifier': 'joint_analyzer'}
+[0.000650] (-) JobUnselected: {'identifier': 'posveleff_controllers'}
+[0.000665] (-) JobUnselected: {'identifier': 'single_joint_description'}
+[0.000684] (dynamics) JobQueued: {'identifier': 'dynamics', 'dependencies': OrderedDict({'single_joint_description': '/home/baranidharan/gravity/install/single_joint_description'})}
+[0.000708] (dynamics) JobStarted: {'identifier': 'dynamics'}
+[0.009870] (dynamics) JobProgress: {'identifier': 'dynamics', 'progress': 'cmake'}
+[0.010569] (dynamics) JobProgress: {'identifier': 'dynamics', 'progress': 'build'}
+[0.011241] (dynamics) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/baranidharan/gravity/build/dynamics', '--', '-j6', '-l6'], 'cwd': '/home/baranidharan/gravity/build/dynamics', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/baranidharan', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'AI_AGENT': 'claude-code_2-1-318_agent', 'USER': 'baranidharan', 'SSH_CLIENT': '192.168.200.239 59454 22', 'CLAUDE_CODE_ENTRYPOINT': 'claude-vscode', 'LC_TIME': 'C.UTF-8', 'VSCODE_NLS_CONFIG': '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/baranidharan/.vscode-server/cli/servers/Stable-261c84cb1eddf11235f9e2c921425e9663fbe556/server/out/nls.messages.json","locale":"en","availableLanguages":{}}', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'GIT_EDITOR': 'true', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'XDG_SESSION_TYPE': 'tty', 'CLAUDE_AGENT_SDK_VERSION': '0.3.318', 'CLAUDE_CODE_SESSION_ATTENDED': '1', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/baranidharan/.vscode-server/cli/servers/Stable-261c84cb1eddf11235f9e2c921425e9663fbe556/server/bin/helpers/browser.sh', 'CLAUDE_CODE_MESSAGING_TOKEN': 'b5a9550a9782d8665511c9b7cefb8795', 'HOME': '/home/baranidharan', 'OLDPWD': '/home/baranidharan/gravity/src/gravity_compensation', 'VSCODE_RECONNECTION_GRACE_TIME': '10800000', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-bdfbfecb-871c-4e38-8cf3-792f6526eea6.sock', 'ROS_PYTHON_VERSION': '3', 'CLAUDE_CODE_CHILD_SESSION': '1', 'LC_MONETARY': 'C.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'APPLICATION_INSIGHTS_NO_STATSBEAT': 'true', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'baranidharan', 'VSCODE_HANDLES_SIGPIPE': 'true', 'CLAUDE_CODE_EMIT_STARTUP_TIMING': '1', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'CLAUDE_CODE_QUESTION_PREVIEW_FORMAT': 'markdown', 'XDG_SESSION_CLASS': 'user', 'XDG_SESSION_ID': '15', 'VSCODE_CLI_REQUIRE_TOKEN': '1e3db392-7d3b-473d-8224-395d524ad63b', 'MCP_CONNECTION_NONBLOCKING': 'true', 'PATH': '/home/baranidharan/.vscode-server/cli/servers/Stable-261c84cb1eddf11235f9e2c921425e9663fbe556/server/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'VSCODE_AGENT_FOLDER': '/home/baranidharan/.vscode-server', 'COREPACK_ENABLE_AUTO_PIN': '0', 'LC_ADDRESS': 'C.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'CLAUDE_EFFORT': 'medium', 'CLAUDE_PID': '3835', 'NoDefaultCurrentDirectoryInExePath': '1', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'C.UTF-8', 'LS_COLORS': '', 'ROS_DOMAIN_ID': '3', 'AMENT_PREFIX_PATH': '/home/baranidharan/gravity/install/single_joint_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'CLAUDE_CODE_STARTUP_FAILURE_RESULTS': '1', 'ELECTRON_RUN_AS_NODE': '1', 'CLAUDE_CODE_ENABLE_SDK_FILE_CHECKPOINTING': 'true', 'CLAUDE_CODE_SESSION_ID': 'f9eb7339-7b18-4989-9319-559f62072693', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CLAUDECODE': '1', 'LC_MEASUREMENT': 'C.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/baranidharan/gravity/build/dynamics', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.200.239 59454 192.168.200.218 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'CLAUDE_CODE_EXECPATH': '/home/baranidharan/.vscode-server/extensions/anthropic.claude-code-2.1.318-linux-x64/resources/native-binary/claude', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'C.UTF-8', 'VCAN_SUDO_PASSWORD': 'barani', 'CLAUDE_CODE_ENABLE_TASKS': '0', 'LC_PAPER': 'C.UTF-8', 'COLCON': '1', 'CLAUDE_CODE_MESSAGING_SOCKET': '/run/user/1000/cc-socks/3835.sock', 'CMAKE_PREFIX_PATH': '/home/baranidharan/gravity/install/single_joint_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.087338] (dynamics) StdoutLine: {'line': b'[ 16%] Built target gtest\n'}
+[0.092126] (dynamics) StdoutLine: {'line': b'[ 33%] Built target gtest_main\n'}
+[0.099886] (-) TimerEvent: {}
+[0.122699] (dynamics) StdoutLine: {'line': b'[ 50%] Built target dynamics_lib\n'}
+[0.160386] (dynamics) StdoutLine: {'line': b'[ 66%] Built target dynamics_info\n'}
+[0.160637] (dynamics) StdoutLine: {'line': b'[ 83%] Built target test_robot_dynamics\n'}
+[0.168655] (dynamics) StdoutLine: {'line': b'[ 91%] Building CXX object CMakeFiles/dynamics_node.dir/src/dynamics_node.cpp.o\n'}
+[0.199971] (-) TimerEvent: {}
+[0.300126] (-) TimerEvent: {}
+[0.400312] (-) TimerEvent: {}
+[0.500483] (-) TimerEvent: {}
+[0.600709] (-) TimerEvent: {}
+[0.701179] (-) TimerEvent: {}
+[0.801315] (-) TimerEvent: {}
+[0.901486] (-) TimerEvent: {}
+[1.001626] (-) TimerEvent: {}
+[1.101793] (-) TimerEvent: {}
+[1.201965] (-) TimerEvent: {}
+[1.302162] (-) TimerEvent: {}
+[1.402483] (-) TimerEvent: {}
+[1.502638] (-) TimerEvent: {}
+[1.602794] (-) TimerEvent: {}
+[1.702939] (-) TimerEvent: {}
+[1.803090] (-) TimerEvent: {}
+[1.903238] (-) TimerEvent: {}
+[2.003499] (-) TimerEvent: {}
+[2.103667] (-) TimerEvent: {}
+[2.203808] (-) TimerEvent: {}
+[2.304064] (-) TimerEvent: {}
+[2.404235] (-) TimerEvent: {}
+[2.504635] (-) TimerEvent: {}
+[2.605439] (-) TimerEvent: {}
+[2.705598] (-) TimerEvent: {}
+[2.805773] (-) TimerEvent: {}
+[2.905920] (-) TimerEvent: {}
+[3.006082] (-) TimerEvent: {}
+[3.106225] (-) TimerEvent: {}
+[3.206381] (-) TimerEvent: {}
+[3.306692] (-) TimerEvent: {}
+[3.406863] (-) TimerEvent: {}
+[3.507067] (-) TimerEvent: {}
+[3.607306] (-) TimerEvent: {}
+[3.707472] (-) TimerEvent: {}
+[3.807607] (-) TimerEvent: {}
+[3.907744] (-) TimerEvent: {}
+[4.007930] (-) TimerEvent: {}
+[4.109061] (-) TimerEvent: {}
+[4.209223] (-) TimerEvent: {}
+[4.309387] (-) TimerEvent: {}
+[4.409539] (-) TimerEvent: {}
+[4.509680] (-) TimerEvent: {}
+[4.609830] (-) TimerEvent: {}
+[4.709978] (-) TimerEvent: {}
+[4.810139] (-) TimerEvent: {}
+[4.910326] (-) TimerEvent: {}
+[5.011084] (-) TimerEvent: {}
+[5.111240] (-) TimerEvent: {}
+[5.211401] (-) TimerEvent: {}
+[5.311543] (-) TimerEvent: {}
+[5.411884] (-) TimerEvent: {}
+[5.512166] (-) TimerEvent: {}
+[5.612339] (-) TimerEvent: {}
+[5.712562] (-) TimerEvent: {}
+[5.812727] (-) TimerEvent: {}
+[5.912903] (-) TimerEvent: {}
+[6.013063] (-) TimerEvent: {}
+[6.113212] (-) TimerEvent: {}
+[6.213424] (-) TimerEvent: {}
+[6.314101] (-) TimerEvent: {}
+[6.414995] (-) TimerEvent: {}
+[6.515170] (-) TimerEvent: {}
+[6.615335] (-) TimerEvent: {}
+[6.715669] (-) TimerEvent: {}
+[6.815808] (-) TimerEvent: {}
+[6.915946] (-) TimerEvent: {}
+[7.016548] (-) TimerEvent: {}
+[7.117202] (-) TimerEvent: {}
+[7.217338] (-) TimerEvent: {}
+[7.317496] (-) TimerEvent: {}
+[7.417640] (-) TimerEvent: {}
+[7.517784] (-) TimerEvent: {}
+[7.617935] (-) TimerEvent: {}
+[7.718076] (-) TimerEvent: {}
+[7.818215] (-) TimerEvent: {}
+[7.918377] (-) TimerEvent: {}
+[8.018525] (-) TimerEvent: {}
+[8.118672] (-) TimerEvent: {}
+[8.218843] (-) TimerEvent: {}
+[8.319003] (-) TimerEvent: {}
+[8.419154] (-) TimerEvent: {}
+[8.519305] (-) TimerEvent: {}
+[8.619397] (-) TimerEvent: {}
+[8.719544] (-) TimerEvent: {}
+[8.819701] (-) TimerEvent: {}
+[8.919859] (-) TimerEvent: {}
+[9.020024] (-) TimerEvent: {}
+[9.120166] (-) TimerEvent: {}
+[9.220319] (-) TimerEvent: {}
+[9.320482] (-) TimerEvent: {}
+[9.420658] (-) TimerEvent: {}
+[9.520851] (-) TimerEvent: {}
+[9.621046] (-) TimerEvent: {}
+[9.721230] (-) TimerEvent: {}
+[9.821390] (-) TimerEvent: {}
+[9.921536] (-) TimerEvent: {}
+[10.021676] (-) TimerEvent: {}
+[10.121843] (-) TimerEvent: {}
+[10.221993] (-) TimerEvent: {}
+[10.322140] (-) TimerEvent: {}
+[10.422284] (-) TimerEvent: {}
+[10.522430] (-) TimerEvent: {}
+[10.622578] (-) TimerEvent: {}
+[10.722731] (-) TimerEvent: {}
+[10.822984] (-) TimerEvent: {}
+[10.923157] (-) TimerEvent: {}
+[11.023319] (-) TimerEvent: {}
+[11.123487] (-) TimerEvent: {}
+[11.223654] (-) TimerEvent: {}
+[11.324161] (-) TimerEvent: {}
+[11.425165] (-) TimerEvent: {}
+[11.525383] (-) TimerEvent: {}
+[11.625532] (-) TimerEvent: {}
+[11.725799] (-) TimerEvent: {}
+[11.825938] (-) TimerEvent: {}
+[11.926070] (-) TimerEvent: {}
+[12.026208] (-) TimerEvent: {}
+[12.126365] (-) TimerEvent: {}
+[12.226519] (-) TimerEvent: {}
+[12.326673] (-) TimerEvent: {}
+[12.426816] (-) TimerEvent: {}
+[12.527494] (-) TimerEvent: {}
+[12.627644] (-) TimerEvent: {}
+[12.727793] (-) TimerEvent: {}
+[12.827951] (-) TimerEvent: {}
+[12.928092] (-) TimerEvent: {}
+[13.028230] (-) TimerEvent: {}
+[13.128413] (-) TimerEvent: {}
+[13.228658] (-) TimerEvent: {}
+[13.328829] (-) TimerEvent: {}
+[13.429007] (-) TimerEvent: {}
+[13.529137] (-) TimerEvent: {}
+[13.629289] (-) TimerEvent: {}
+[13.729448] (-) TimerEvent: {}
+[13.829610] (-) TimerEvent: {}
+[13.930369] (-) TimerEvent: {}
+[14.030526] (-) TimerEvent: {}
+[14.130675] (-) TimerEvent: {}
+[14.230821] (-) TimerEvent: {}
+[14.330944] (-) TimerEvent: {}
+[14.431293] (-) TimerEvent: {}
+[14.459393] (dynamics) StdoutLine: {'line': b'[100%] Linking CXX executable dynamics_node\n'}
+[14.531413] (-) TimerEvent: {}
+[14.631595] (-) TimerEvent: {}
+[14.713513] (dynamics) StdoutLine: {'line': b'[100%] Built target dynamics_node\n'}
+[14.727955] (dynamics) CommandEnded: {'returncode': 0}
+[14.729231] (dynamics) JobProgress: {'identifier': 'dynamics', 'progress': 'install'}
+[14.731686] (-) TimerEvent: {}
+[14.745368] (dynamics) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/baranidharan/gravity/build/dynamics'], 'cwd': '/home/baranidharan/gravity/build/dynamics', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/baranidharan', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'AI_AGENT': 'claude-code_2-1-318_agent', 'USER': 'baranidharan', 'SSH_CLIENT': '192.168.200.239 59454 22', 'CLAUDE_CODE_ENTRYPOINT': 'claude-vscode', 'LC_TIME': 'C.UTF-8', 'VSCODE_NLS_CONFIG': '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/baranidharan/.vscode-server/cli/servers/Stable-261c84cb1eddf11235f9e2c921425e9663fbe556/server/out/nls.messages.json","locale":"en","availableLanguages":{}}', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'GIT_EDITOR': 'true', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'XDG_SESSION_TYPE': 'tty', 'CLAUDE_AGENT_SDK_VERSION': '0.3.318', 'CLAUDE_CODE_SESSION_ATTENDED': '1', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/baranidharan/.vscode-server/cli/servers/Stable-261c84cb1eddf11235f9e2c921425e9663fbe556/server/bin/helpers/browser.sh', 'CLAUDE_CODE_MESSAGING_TOKEN': 'b5a9550a9782d8665511c9b7cefb8795', 'HOME': '/home/baranidharan', 'OLDPWD': '/home/baranidharan/gravity/src/gravity_compensation', 'VSCODE_RECONNECTION_GRACE_TIME': '10800000', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-bdfbfecb-871c-4e38-8cf3-792f6526eea6.sock', 'ROS_PYTHON_VERSION': '3', 'CLAUDE_CODE_CHILD_SESSION': '1', 'LC_MONETARY': 'C.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'APPLICATION_INSIGHTS_NO_STATSBEAT': 'true', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'baranidharan', 'VSCODE_HANDLES_SIGPIPE': 'true', 'CLAUDE_CODE_EMIT_STARTUP_TIMING': '1', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'CLAUDE_CODE_QUESTION_PREVIEW_FORMAT': 'markdown', 'XDG_SESSION_CLASS': 'user', 'XDG_SESSION_ID': '15', 'VSCODE_CLI_REQUIRE_TOKEN': '1e3db392-7d3b-473d-8224-395d524ad63b', 'MCP_CONNECTION_NONBLOCKING': 'true', 'PATH': '/home/baranidharan/.vscode-server/cli/servers/Stable-261c84cb1eddf11235f9e2c921425e9663fbe556/server/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'VSCODE_AGENT_FOLDER': '/home/baranidharan/.vscode-server', 'COREPACK_ENABLE_AUTO_PIN': '0', 'LC_ADDRESS': 'C.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'CLAUDE_EFFORT': 'medium', 'CLAUDE_PID': '3835', 'NoDefaultCurrentDirectoryInExePath': '1', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'C.UTF-8', 'LS_COLORS': '', 'ROS_DOMAIN_ID': '3', 'AMENT_PREFIX_PATH': '/home/baranidharan/gravity/install/single_joint_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'CLAUDE_CODE_STARTUP_FAILURE_RESULTS': '1', 'ELECTRON_RUN_AS_NODE': '1', 'CLAUDE_CODE_ENABLE_SDK_FILE_CHECKPOINTING': 'true', 'CLAUDE_CODE_SESSION_ID': 'f9eb7339-7b18-4989-9319-559f62072693', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CLAUDECODE': '1', 'LC_MEASUREMENT': 'C.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/baranidharan/gravity/build/dynamics', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.200.239 59454 192.168.200.218 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'CLAUDE_CODE_EXECPATH': '/home/baranidharan/.vscode-server/extensions/anthropic.claude-code-2.1.318-linux-x64/resources/native-binary/claude', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'C.UTF-8', 'VCAN_SUDO_PASSWORD': 'barani', 'CLAUDE_CODE_ENABLE_TASKS': '0', 'LC_PAPER': 'C.UTF-8', 'COLCON': '1', 'CLAUDE_CODE_MESSAGING_SOCKET': '/run/user/1000/cc-socks/3835.sock', 'CMAKE_PREFIX_PATH': '/home/baranidharan/gravity/install/single_joint_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[14.754339] (dynamics) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[14.755460] (dynamics) StdoutLine: {'line': b'-- Up-to-date: /home/baranidharan/gravity/install/dynamics/lib/dynamics/dynamics_info\n'}
+[14.755539] (dynamics) StdoutLine: {'line': b'-- Installing: /home/baranidharan/gravity/install/dynamics/lib/dynamics/dynamics_node\n'}
+[14.757295] (dynamics) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/baranidharan/gravity/install/dynamics/lib/dynamics/dynamics_node" to ""\n'}
+[14.757476] (dynamics) StdoutLine: {'line': b'-- Up-to-date: /home/baranidharan/gravity/install/dynamics/share/ament_index/resource_index/package_run_dependencies/dynamics\n'}
+[14.757574] (dynamics) StdoutLine: {'line': b'-- Up-to-date: /home/baranidharan/gravity/install/dynamics/share/ament_index/resource_index/parent_prefix_path/dynamics\n'}
+[14.757729] (dynamics) StdoutLine: {'line': b'-- Up-to-date: /home/baranidharan/gravity/install/dynamics/share/dynamics/environment/ament_prefix_path.sh\n'}
+[14.757822] (dynamics) StdoutLine: {'line': b'-- Up-to-date: /home/baranidharan/gravity/install/dynamics/share/dynamics/environment/ament_prefix_path.dsv\n'}
+[14.757916] (dynamics) StdoutLine: {'line': b'-- Up-to-date: /home/baranidharan/gravity/install/dynamics/share/dynamics/environment/path.sh\n'}
+[14.758001] (dynamics) StdoutLine: {'line': b'-- Up-to-date: /home/baranidharan/gravity/install/dynamics/share/dynamics/environment/path.dsv\n'}
+[14.758083] (dynamics) StdoutLine: {'line': b'-- Up-to-date: /home/baranidharan/gravity/install/dynamics/share/dynamics/local_setup.bash\n'}
+[14.758156] (dynamics) StdoutLine: {'line': b'-- Up-to-date: /home/baranidharan/gravity/install/dynamics/share/dynamics/local_setup.sh\n'}
+[14.758229] (dynamics) StdoutLine: {'line': b'-- Up-to-date: /home/baranidharan/gravity/install/dynamics/share/dynamics/local_setup.zsh\n'}
+[14.758298] (dynamics) StdoutLine: {'line': b'-- Up-to-date: /home/baranidharan/gravity/install/dynamics/share/dynamics/local_setup.dsv\n'}
+[14.758398] (dynamics) StdoutLine: {'line': b'-- Installing: /home/baranidharan/gravity/install/dynamics/share/dynamics/package.dsv\n'}
+[14.758508] (dynamics) StdoutLine: {'line': b'-- Up-to-date: /home/baranidharan/gravity/install/dynamics/share/ament_index/resource_index/packages/dynamics\n'}
+[14.758622] (dynamics) StdoutLine: {'line': b'-- Up-to-date: /home/baranidharan/gravity/install/dynamics/share/dynamics/cmake/dynamicsConfig.cmake\n'}
+[14.758694] (dynamics) StdoutLine: {'line': b'-- Up-to-date: /home/baranidharan/gravity/install/dynamics/share/dynamics/cmake/dynamicsConfig-version.cmake\n'}
+[14.758753] (dynamics) StdoutLine: {'line': b'-- Up-to-date: /home/baranidharan/gravity/install/dynamics/share/dynamics/package.xml\n'}
+[14.760680] (dynamics) CommandEnded: {'returncode': 0}
+[14.793383] (dynamics) JobEnded: {'identifier': 'dynamics', 'rc': 0}
+[14.794960] (-) EventReactorShutdown: {}

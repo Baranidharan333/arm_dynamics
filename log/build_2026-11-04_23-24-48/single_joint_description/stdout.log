@@ -1,0 +1,29 @@
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/baranidharan/gravity/build/single_joint_description
+-- Install configuration: ""
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/urdf
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/urdf/single_joint_1kg.urdf
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/launch
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/launch/display.launch.py
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/rviz
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/rviz/display.rviz
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/meshes
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/meshes/dm4340p.stl
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/ament_index/resource_index/package_run_dependencies/single_joint_description
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/ament_index/resource_index/parent_prefix_path/single_joint_description
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/environment/ament_prefix_path.sh
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/environment/ament_prefix_path.dsv
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/environment/path.sh
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/environment/path.dsv
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/local_setup.bash
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/local_setup.sh
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/local_setup.zsh
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/local_setup.dsv
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/package.dsv
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/ament_index/resource_index/packages/single_joint_description
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/cmake/single_joint_descriptionConfig.cmake
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/cmake/single_joint_descriptionConfig-version.cmake
+-- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/package.xml

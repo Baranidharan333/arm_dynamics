@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>gravity_compensation</name>
+  <version>0.2.0</version>
+  <description>
+    KDL gravity model: computes each joint's gravity torque from the robot_description and
+    /joint_states and publishes it on /gravity_torque.
+  </description>
+  <maintainer email="ihrphysicalai@gmail.com">baranidharan</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>kdl_parser</depend>
+  <depend>orocos_kdl_vendor</depend>
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>urdfdom</depend>
+
+  <test_depend>ament_cmake_gmock</test_depend>
+  <test_depend>single_joint_description</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,49 @@
+cd /home/baranidharan/Templates/daksha/gravity
+sudo ip link set can0 up type can bitrate 1000000
+python3 test.py --selftest                     # model check, no CAN
+python3 test.py --read-limits                  # confirm TMAX (expect 28 for DM4340)
+python3 test.py --dry-run --calib-hanging      # arm hanging at start; hold it, lift by hand: q should increase toward +90°
+python3 test.py --calib-hanging                # gravity compensation
+
+
+
+  <link name="load_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="3.4533e-4" ixy="0" ixz="0" iyy="6.625e-4" iyz="0" izz="3.4533e-4"/>
+    </inertial>
+    <!-- URDF has no hollow cylinder primitive; the visual is the solid OD (cylinder Z rotated to Y). -->
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.07" length="0.013"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+      <geometry>
+        <cylinder radius="0.07" length="0.013"/>
+      </geometry>
+    </collision>
+  </link>
+
+
+
+ros2 service call /SingleJointSystem/set_motor_gains hw_interface/srv/SetMotorGains \
+  "{motor_ids: [1], kp: [40.0], kd: [1.2]}"
+
+ros2 service call /DualJointSystem/set_motor_gains hw_interface/srv/SetMotorGains \
+  "{motor_ids: [1, 2], kp: [40.0, 40.0], kd: [1.2, 1.2]}"
+
+
+source ~/gravity/install/setup.bash
+ros2 run gravity_test joint_cmd --ros-args -p gravity_enabled:=false
+
+
+
+ros2 param set /joint_command_limiter gravity_enabled true
+
+
+ros2 param set /gravity_torque_node gravity_scale 0.0   # effectively off

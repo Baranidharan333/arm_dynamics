@@ -1,0 +1,8 @@
+source;share/dynamics/hook/cmake_prefix_path.ps1
+source;share/dynamics/hook/cmake_prefix_path.dsv
+source;share/dynamics/hook/cmake_prefix_path.sh
+source;share/dynamics/local_setup.bash
+source;share/dynamics/local_setup.dsv
+source;share/dynamics/local_setup.ps1
+source;share/dynamics/local_setup.sh
+source;share/dynamics/local_setup.zsh

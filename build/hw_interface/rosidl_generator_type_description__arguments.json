@@ -1,0 +1,13 @@
+{
+  "package_name": "hw_interface",
+  "output_dir": "/home/baranidharan/gravity/build/hw_interface/rosidl_generator_type_description/hw_interface",
+  "idl_tuples": [
+    "/home/baranidharan/gravity/build/hw_interface/rosidl_adapter/hw_interface:msg/MotorStatus.idl",
+    "/home/baranidharan/gravity/build/hw_interface/rosidl_adapter/hw_interface:msg/MotorStatusArray.idl",
+    "/home/baranidharan/gravity/build/hw_interface/rosidl_adapter/hw_interface:srv/SetMotorGains.idl"
+  ],
+  "include_paths": [
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces"
+  ]
+}

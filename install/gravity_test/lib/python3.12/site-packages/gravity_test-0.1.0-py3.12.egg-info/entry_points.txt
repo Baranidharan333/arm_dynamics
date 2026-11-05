@@ -1,0 +1,3 @@
+[console_scripts]
+joint_cmd = gravity_test.joint_cmd:main
+position_cmd = gravity_test.position_cmd:main

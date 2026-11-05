@@ -1,0 +1,14 @@
+<library path="posveleff_controller">
+
+  <class
+      name="posveleff_controllers/PosVelEffController"
+      type="posveleff_controllers::PosVelEffController"
+      base_class_type="controller_interface::ControllerInterface">
+
+    <description>
+      MIT Position Velocity Effort Controller
+    </description>
+
+  </class>
+
+</library>

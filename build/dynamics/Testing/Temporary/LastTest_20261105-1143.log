@@ -1,0 +1,45 @@
+Start testing: Nov 05 17:13 IST
+----------------------------------------------------------
+1/1 Testing: test_robot_dynamics
+1/1 Test: test_robot_dynamics
+Command: "/usr/bin/python3" "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/baranidharan/gravity/build/dynamics/test_results/dynamics/test_robot_dynamics.gtest.xml" "--package-name" "dynamics" "--output-file" "/home/baranidharan/gravity/build/dynamics/ament_cmake_gtest/test_robot_dynamics.txt" "--command" "/home/baranidharan/gravity/build/dynamics/test_robot_dynamics" "--gtest_output=xml:/home/baranidharan/gravity/build/dynamics/test_results/dynamics/test_robot_dynamics.gtest.xml"
+Directory: /home/baranidharan/gravity/build/dynamics
+"test_robot_dynamics" start time: Nov 05 17:13 IST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/baranidharan/gravity/build/dynamics':
+ - /home/baranidharan/gravity/build/dynamics/test_robot_dynamics --gtest_output=xml:/home/baranidharan/gravity/build/dynamics/test_results/dynamics/test_robot_dynamics.gtest.xml
+Running main() from /opt/ros/jazzy/src/gtest_vendor/src/gtest_main.cc
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from DualJointDynamics
+[ RUN      ] DualJointDynamics.JointsInOrder
+[       OK ] DualJointDynamics.JointsInOrder (1 ms)
+[ RUN      ] DualJointDynamics.MatchesPlanar2R
+[       OK ] DualJointDynamics.MatchesPlanar2R (0 ms)
+[ RUN      ] DualJointDynamics.GravityMatchesKdlNodeOnRig
+[       OK ] DualJointDynamics.GravityMatchesKdlNodeOnRig (0 ms)
+[ RUN      ] DualJointDynamics.SplitAndInverseAreConsistent
+[       OK ] DualJointDynamics.SplitAndInverseAreConsistent (0 ms)
+[ RUN      ] DualJointDynamics.RejectsWrongSize
+[       OK ] DualJointDynamics.RejectsWrongSize (0 ms)
+[----------] 5 tests from DualJointDynamics (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (2 ms total)
+[  PASSED  ] 5 tests.
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/home/baranidharan/gravity/build/dynamics/test_results/dynamics/test_robot_dynamics.gtest.xml'
+-- run_test.py: verify result file '/home/baranidharan/gravity/build/dynamics/test_results/dynamics/test_robot_dynamics.gtest.xml'
+<end of output>
+Test time =   0.11 sec
+----------------------------------------------------------
+Test Passed.
+"test_robot_dynamics" end time: Nov 05 17:13 IST
+"test_robot_dynamics" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 05 17:13 IST
+
+gtest =   0.11 sec*proc
+

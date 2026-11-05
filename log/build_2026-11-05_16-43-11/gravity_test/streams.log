@@ -1,0 +1,30 @@
+[0.745s] Invoking command in '/home/baranidharan/gravity/src/gravity_test': AMENT_PREFIX_PATH=/home/baranidharan/gravity/install/gravity_compensation:/home/baranidharan/gravity/install/single_joint_description:/home/baranidharan/gravity/install/posveleff_controllers:/home/baranidharan/gravity/install/hw_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/baranidharan/gravity/install/gravity_compensation:/home/baranidharan/gravity/install/single_joint_description:/home/baranidharan/gravity/install/posveleff_controllers:/home/baranidharan/gravity/install/hw_interface:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/baranidharan/gravity/install/posveleff_controllers/lib:/home/baranidharan/gravity/install/hw_interface/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/baranidharan/gravity/build/gravity_test/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/baranidharan/gravity/install/gravity_test/lib/python3.12/site-packages:/home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gravity_test build --build-base /home/baranidharan/gravity/build/gravity_test/build install --record /home/baranidharan/gravity/build/gravity_test/install.log --install-scripts $base/lib/gravity_test --single-version-externally-managed install_data
+[0.990s] running egg_info
+[1.009s] writing ../../build/gravity_test/gravity_test.egg-info/PKG-INFO
+[1.009s] writing dependency_links to ../../build/gravity_test/gravity_test.egg-info/dependency_links.txt
+[1.009s] writing entry points to ../../build/gravity_test/gravity_test.egg-info/entry_points.txt
+[1.009s] writing requirements to ../../build/gravity_test/gravity_test.egg-info/requires.txt
+[1.009s] writing top-level names to ../../build/gravity_test/gravity_test.egg-info/top_level.txt
+[1.046s] reading manifest file '../../build/gravity_test/gravity_test.egg-info/SOURCES.txt'
+[1.047s] writing manifest file '../../build/gravity_test/gravity_test.egg-info/SOURCES.txt'
+[1.047s] running build
+[1.047s] running build_py
+[1.047s] copying gravity_test/position_cmd.py -> /home/baranidharan/gravity/build/gravity_test/build/lib/gravity_test
+[1.048s] copying gravity_test/joint_cmd.py -> /home/baranidharan/gravity/build/gravity_test/build/lib/gravity_test
+[1.048s] running install
+[1.053s] running install_lib
+[1.072s] copying /home/baranidharan/gravity/build/gravity_test/build/lib/gravity_test/position_cmd.py -> /home/baranidharan/gravity/install/gravity_test/lib/python3.12/site-packages/gravity_test
+[1.072s] copying /home/baranidharan/gravity/build/gravity_test/build/lib/gravity_test/joint_cmd.py -> /home/baranidharan/gravity/install/gravity_test/lib/python3.12/site-packages/gravity_test
+[1.072s] byte-compiling /home/baranidharan/gravity/install/gravity_test/lib/python3.12/site-packages/gravity_test/position_cmd.py to position_cmd.cpython-312.pyc
+[1.074s] byte-compiling /home/baranidharan/gravity/install/gravity_test/lib/python3.12/site-packages/gravity_test/joint_cmd.py to joint_cmd.cpython-312.pyc
+[1.075s] running install_data
+[1.075s] copying config/dual_joint_position_controllers.yaml -> /home/baranidharan/gravity/install/gravity_test/share/gravity_test/config
+[1.076s] copying launch/dual_joint_position.launch.py -> /home/baranidharan/gravity/install/gravity_test/share/gravity_test/launch
+[1.076s] running install_egg_info
+[1.099s] removing '/home/baranidharan/gravity/install/gravity_test/lib/python3.12/site-packages/gravity_test-0.1.0-py3.12.egg-info' (and everything under it)
+[1.099s] Copying ../../build/gravity_test/gravity_test.egg-info to /home/baranidharan/gravity/install/gravity_test/lib/python3.12/site-packages/gravity_test-0.1.0-py3.12.egg-info
+[1.099s] running install_scripts
+[1.231s] Installing joint_cmd script to /home/baranidharan/gravity/install/gravity_test/lib/gravity_test
+[1.231s] Installing position_cmd script to /home/baranidharan/gravity/install/gravity_test/lib/gravity_test
+[1.231s] writing list of installed files to '/home/baranidharan/gravity/build/gravity_test/install.log'
+[1.258s] Invoked command in '/home/baranidharan/gravity/src/gravity_test' returned '0': AMENT_PREFIX_PATH=/home/baranidharan/gravity/install/gravity_compensation:/home/baranidharan/gravity/install/single_joint_description:/home/baranidharan/gravity/install/posveleff_controllers:/home/baranidharan/gravity/install/hw_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/baranidharan/gravity/install/gravity_compensation:/home/baranidharan/gravity/install/single_joint_description:/home/baranidharan/gravity/install/posveleff_controllers:/home/baranidharan/gravity/install/hw_interface:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/baranidharan/gravity/install/posveleff_controllers/lib:/home/baranidharan/gravity/install/hw_interface/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/baranidharan/gravity/build/gravity_test/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/baranidharan/gravity/install/gravity_test/lib/python3.12/site-packages:/home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gravity_test build --build-base /home/baranidharan/gravity/build/gravity_test/build install --record /home/baranidharan/gravity/build/gravity_test/install.log --install-scripts $base/lib/gravity_test --single-version-externally-managed install_data

@@ -1,0 +1,25 @@
+[0.787s] Invoking command in '/home/baranidharan/gravity/src/analyzer': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/baranidharan/gravity/build/joint_analyzer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/joint_analyzer build --build-base /home/baranidharan/gravity/build/joint_analyzer/build install --record /home/baranidharan/gravity/build/joint_analyzer/install.log --install-scripts $base/lib/joint_analyzer --single-version-externally-managed install_data
+[1.016s] running egg_info
+[1.033s] writing ../../build/joint_analyzer/joint_analyzer.egg-info/PKG-INFO
+[1.034s] writing dependency_links to ../../build/joint_analyzer/joint_analyzer.egg-info/dependency_links.txt
+[1.034s] writing entry points to ../../build/joint_analyzer/joint_analyzer.egg-info/entry_points.txt
+[1.034s] writing requirements to ../../build/joint_analyzer/joint_analyzer.egg-info/requires.txt
+[1.034s] writing top-level names to ../../build/joint_analyzer/joint_analyzer.egg-info/top_level.txt
+[1.070s] reading manifest file '../../build/joint_analyzer/joint_analyzer.egg-info/SOURCES.txt'
+[1.071s] writing manifest file '../../build/joint_analyzer/joint_analyzer.egg-info/SOURCES.txt'
+[1.071s] running build
+[1.071s] running build_py
+[1.072s] running install
+[1.077s] running install_lib
+[1.096s] running install_data
+[1.096s] running install_egg_info
+[1.115s] removing '/home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer-0.0.1-py3.12.egg-info' (and everything under it)
+[1.115s] Copying ../../build/joint_analyzer/joint_analyzer.egg-info to /home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages/joint_analyzer-0.0.1-py3.12.egg-info
+[1.116s] running install_scripts
+[1.235s] Installing check_diffs script to /home/baranidharan/gravity/install/joint_analyzer/lib/joint_analyzer
+[1.235s] Installing diagnose_qos script to /home/baranidharan/gravity/install/joint_analyzer/lib/joint_analyzer
+[1.235s] Installing plot_server script to /home/baranidharan/gravity/install/joint_analyzer/lib/joint_analyzer
+[1.235s] Installing server script to /home/baranidharan/gravity/install/joint_analyzer/lib/joint_analyzer
+[1.236s] Installing verify_mapping script to /home/baranidharan/gravity/install/joint_analyzer/lib/joint_analyzer
+[1.236s] writing list of installed files to '/home/baranidharan/gravity/build/joint_analyzer/install.log'
+[1.263s] Invoked command in '/home/baranidharan/gravity/src/analyzer' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/baranidharan/gravity/build/joint_analyzer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/joint_analyzer build --build-base /home/baranidharan/gravity/build/joint_analyzer/build install --record /home/baranidharan/gravity/build/joint_analyzer/install.log --install-scripts $base/lib/joint_analyzer --single-version-externally-managed install_data

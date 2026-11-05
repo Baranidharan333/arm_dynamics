@@ -1,0 +1,518 @@
+[0.098s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.098s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=6, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7dd58618aa80>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7dd586130710>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7dd586130710>>, mixin_verb=('build',))
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.135s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.135s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/baranidharan/gravity'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/analyzer) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/analyzer) by extension 'ignore'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/analyzer) by extension 'ignore_ament_install'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/analyzer) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/analyzer) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/analyzer) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/analyzer) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/analyzer) by extensions ['ros']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/analyzer) by extension 'ros'
+[0.159s] DEBUG:colcon.colcon_core.package_identification:Package 'src/analyzer' with type 'ros.ament_python' and name 'joint_analyzer'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/dynamics) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/dynamics) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/dynamics) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/dynamics) by extensions ['colcon_pkg']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/dynamics) by extension 'colcon_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/dynamics) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/dynamics) by extension 'colcon_meta'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/dynamics) by extensions ['ros']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/dynamics) by extension 'ros'
+[0.160s] DEBUG:colcon.colcon_core.package_identification:Package 'src/dynamics' with type 'ros.ament_cmake' and name 'dynamics'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/gravity_compensation) by extensions ['ignore', 'ignore_ament_install']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/gravity_compensation) by extension 'ignore'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/gravity_compensation) by extension 'ignore_ament_install'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/gravity_compensation) by extensions ['colcon_pkg']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/gravity_compensation) by extension 'colcon_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/gravity_compensation) by extensions ['colcon_meta']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/gravity_compensation) by extension 'colcon_meta'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/gravity_compensation) by extensions ['ros']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/gravity_compensation) by extension 'ros'
+[0.160s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gravity_compensation' with type 'ros.ament_cmake' and name 'gravity_compensation'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/gravity_test) by extensions ['ignore', 'ignore_ament_install']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/gravity_test) by extension 'ignore'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/gravity_test) by extension 'ignore_ament_install'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/gravity_test) by extensions ['colcon_pkg']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/gravity_test) by extension 'colcon_pkg'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/gravity_test) by extensions ['colcon_meta']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/gravity_test) by extension 'colcon_meta'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/gravity_test) by extensions ['ros']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/gravity_test) by extension 'ros'
+[0.161s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gravity_test' with type 'ros.ament_python' and name 'gravity_test'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/hw_interface) by extensions ['ignore', 'ignore_ament_install']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/hw_interface) by extension 'ignore'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/hw_interface) by extension 'ignore_ament_install'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/hw_interface) by extensions ['colcon_pkg']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/hw_interface) by extension 'colcon_pkg'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/hw_interface) by extensions ['colcon_meta']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/hw_interface) by extension 'colcon_meta'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/hw_interface) by extensions ['ros']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/hw_interface) by extension 'ros'
+[0.162s] DEBUG:colcon.colcon_core.package_identification:Package 'src/hw_interface' with type 'ros.ament_cmake' and name 'hw_interface'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/posveleff_controllers) by extensions ['ignore', 'ignore_ament_install']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/posveleff_controllers) by extension 'ignore'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/posveleff_controllers) by extension 'ignore_ament_install'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/posveleff_controllers) by extensions ['colcon_pkg']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/posveleff_controllers) by extension 'colcon_pkg'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/posveleff_controllers) by extensions ['colcon_meta']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/posveleff_controllers) by extension 'colcon_meta'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/posveleff_controllers) by extensions ['ros']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/posveleff_controllers) by extension 'ros'
+[0.163s] DEBUG:colcon.colcon_core.package_identification:Package 'src/posveleff_controllers' with type 'ros.ament_cmake' and name 'posveleff_controllers'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf) by extensions ['ignore', 'ignore_ament_install']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf) by extension 'ignore'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf) by extension 'ignore_ament_install'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf) by extensions ['colcon_pkg']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf) by extension 'colcon_pkg'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf) by extensions ['colcon_meta']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf) by extension 'colcon_meta'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf) by extensions ['ros']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/urdf) by extension 'ros'
+[0.164s] DEBUG:colcon.colcon_core.package_identification:Package 'src/urdf' with type 'ros.ament_cmake' and name 'single_joint_description'
+[0.164s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.164s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.164s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.164s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.164s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.180s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.180s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.182s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/baranidharan/gravity/install
+[0.183s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 463 installed packages in /opt/ros/jazzy
+[0.185s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hw_interface' build argument 'cmake_args' from command line to 'None'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hw_interface' build argument 'cmake_target' from command line to 'None'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hw_interface' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hw_interface' build argument 'cmake_clean_cache' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hw_interface' build argument 'cmake_clean_first' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hw_interface' build argument 'cmake_force_configure' from command line to 'False'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hw_interface' build argument 'ament_cmake_args' from command line to 'None'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hw_interface' build argument 'catkin_cmake_args' from command line to 'None'
+[0.236s] Level 5:colcon.colcon_core.verb:set package 'hw_interface' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.236s] DEBUG:colcon.colcon_core.verb:Building package 'hw_interface' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/baranidharan/gravity/build/hw_interface', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/baranidharan/gravity/install/hw_interface', 'merge_install': False, 'path': '/home/baranidharan/gravity/src/hw_interface', 'symlink_install': False, 'test_result_base': None}
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'joint_analyzer' build argument 'cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'joint_analyzer' build argument 'cmake_target' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'joint_analyzer' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'joint_analyzer' build argument 'cmake_clean_cache' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'joint_analyzer' build argument 'cmake_clean_first' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'joint_analyzer' build argument 'cmake_force_configure' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'joint_analyzer' build argument 'ament_cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'joint_analyzer' build argument 'catkin_cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'joint_analyzer' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.237s] DEBUG:colcon.colcon_core.verb:Building package 'joint_analyzer' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/baranidharan/gravity/build/joint_analyzer', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/baranidharan/gravity/install/joint_analyzer', 'merge_install': False, 'path': '/home/baranidharan/gravity/src/analyzer', 'symlink_install': False, 'test_result_base': None}
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'posveleff_controllers' build argument 'cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'posveleff_controllers' build argument 'cmake_target' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'posveleff_controllers' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'posveleff_controllers' build argument 'cmake_clean_cache' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'posveleff_controllers' build argument 'cmake_clean_first' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'posveleff_controllers' build argument 'cmake_force_configure' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'posveleff_controllers' build argument 'ament_cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'posveleff_controllers' build argument 'catkin_cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'posveleff_controllers' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.237s] DEBUG:colcon.colcon_core.verb:Building package 'posveleff_controllers' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/baranidharan/gravity/build/posveleff_controllers', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/baranidharan/gravity/install/posveleff_controllers', 'merge_install': False, 'path': '/home/baranidharan/gravity/src/posveleff_controllers', 'symlink_install': False, 'test_result_base': None}
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'single_joint_description' build argument 'cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'single_joint_description' build argument 'cmake_target' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'single_joint_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'single_joint_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'single_joint_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'single_joint_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'single_joint_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'single_joint_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.237s] Level 5:colcon.colcon_core.verb:set package 'single_joint_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.237s] DEBUG:colcon.colcon_core.verb:Building package 'single_joint_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/baranidharan/gravity/build/single_joint_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/baranidharan/gravity/install/single_joint_description', 'merge_install': False, 'path': '/home/baranidharan/gravity/src/urdf', 'symlink_install': False, 'test_result_base': None}
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'dynamics' build argument 'cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'dynamics' build argument 'cmake_target' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'dynamics' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'dynamics' build argument 'cmake_clean_cache' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'dynamics' build argument 'cmake_clean_first' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'dynamics' build argument 'cmake_force_configure' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'dynamics' build argument 'ament_cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'dynamics' build argument 'catkin_cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'dynamics' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.238s] DEBUG:colcon.colcon_core.verb:Building package 'dynamics' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/baranidharan/gravity/build/dynamics', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/baranidharan/gravity/install/dynamics', 'merge_install': False, 'path': '/home/baranidharan/gravity/src/dynamics', 'symlink_install': False, 'test_result_base': None}
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'gravity_compensation' build argument 'cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'gravity_compensation' build argument 'cmake_target' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'gravity_compensation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'gravity_compensation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'gravity_compensation' build argument 'cmake_clean_first' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'gravity_compensation' build argument 'cmake_force_configure' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'gravity_compensation' build argument 'ament_cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'gravity_compensation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'gravity_compensation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.238s] DEBUG:colcon.colcon_core.verb:Building package 'gravity_compensation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/baranidharan/gravity/build/gravity_compensation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/baranidharan/gravity/install/gravity_compensation', 'merge_install': False, 'path': '/home/baranidharan/gravity/src/gravity_compensation', 'symlink_install': False, 'test_result_base': None}
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'gravity_test' build argument 'cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'gravity_test' build argument 'cmake_target' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'gravity_test' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'gravity_test' build argument 'cmake_clean_cache' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'gravity_test' build argument 'cmake_clean_first' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'gravity_test' build argument 'cmake_force_configure' from command line to 'False'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'gravity_test' build argument 'ament_cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'gravity_test' build argument 'catkin_cmake_args' from command line to 'None'
+[0.238s] Level 5:colcon.colcon_core.verb:set package 'gravity_test' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.238s] DEBUG:colcon.colcon_core.verb:Building package 'gravity_test' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/baranidharan/gravity/build/gravity_test', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/baranidharan/gravity/install/gravity_test', 'merge_install': False, 'path': '/home/baranidharan/gravity/src/gravity_test', 'symlink_install': False, 'test_result_base': None}
+[0.238s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.239s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.239s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/baranidharan/gravity/src/urdf' with build type 'ament_cmake'
+[0.239s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/baranidharan/gravity/src/urdf'
+[0.241s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.241s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.241s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.245s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/baranidharan/gravity/src/hw_interface' with build type 'ament_cmake'
+[0.245s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/baranidharan/gravity/src/hw_interface'
+[0.246s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.246s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.249s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/baranidharan/gravity/src/posveleff_controllers' with build type 'ament_cmake'
+[0.249s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/baranidharan/gravity/src/posveleff_controllers'
+[0.250s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.250s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.254s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/baranidharan/gravity/src/analyzer' with build type 'ament_python'
+[0.269s] Level 1:colcon.colcon_core.shell:create_environment_hook('joint_analyzer', 'ament_prefix_path')
+[0.269s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/joint_analyzer/share/joint_analyzer/hook/ament_prefix_path.ps1'
+[0.270s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/joint_analyzer/share/joint_analyzer/hook/ament_prefix_path.dsv'
+[0.270s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/joint_analyzer/share/joint_analyzer/hook/ament_prefix_path.sh'
+[0.271s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.271s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.278s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/baranidharan/gravity/build/single_joint_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/baranidharan/gravity/build/single_joint_description -- -j6 -l6
+[0.280s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/baranidharan/gravity/build/hw_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/baranidharan/gravity/build/hw_interface -- -j6 -l6
+[0.282s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/baranidharan/gravity/build/posveleff_controllers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/baranidharan/gravity/build/posveleff_controllers -- -j6 -l6
+[0.537s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/baranidharan/gravity/src/analyzer'
+[0.537s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.537s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.545s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/baranidharan/gravity/build/single_joint_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/baranidharan/gravity/build/single_joint_description -- -j6 -l6
+[0.566s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/baranidharan/gravity/build/single_joint_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/baranidharan/gravity/build/single_joint_description
+[0.567s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/baranidharan/gravity/build/posveleff_controllers' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/baranidharan/gravity/build/posveleff_controllers -- -j6 -l6
+[0.569s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/baranidharan/gravity/build/posveleff_controllers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/baranidharan/gravity/build/posveleff_controllers
+[0.587s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(single_joint_description)
+[0.589s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/baranidharan/gravity/build/single_joint_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/baranidharan/gravity/build/single_joint_description
+[0.596s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/single_joint_description' for CMake module files
+[0.598s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/single_joint_description' for CMake config files
+[0.598s] Level 1:colcon.colcon_core.shell:create_environment_hook('single_joint_description', 'cmake_prefix_path')
+[0.598s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/hook/cmake_prefix_path.ps1'
+[0.599s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/hook/cmake_prefix_path.dsv'
+[0.599s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/hook/cmake_prefix_path.sh'
+[0.600s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/single_joint_description/bin'
+[0.600s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/single_joint_description/lib/pkgconfig/single_joint_description.pc'
+[0.600s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/single_joint_description/lib/python3.12/site-packages'
+[0.600s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/single_joint_description/bin'
+[0.601s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/package.ps1'
+[0.602s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/package.dsv'
+[0.602s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/package.sh'
+[0.603s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/package.bash'
+[0.603s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/package.zsh'
+[0.604s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/baranidharan/gravity/install/single_joint_description/share/colcon-core/packages/single_joint_description)
+[0.604s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(single_joint_description)
+[0.604s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/single_joint_description' for CMake module files
+[0.605s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/single_joint_description' for CMake config files
+[0.605s] Level 1:colcon.colcon_core.shell:create_environment_hook('single_joint_description', 'cmake_prefix_path')
+[0.605s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/hook/cmake_prefix_path.ps1'
+[0.606s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/hook/cmake_prefix_path.dsv'
+[0.606s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/hook/cmake_prefix_path.sh'
+[0.606s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/single_joint_description/bin'
+[0.606s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/single_joint_description/lib/pkgconfig/single_joint_description.pc'
+[0.607s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/single_joint_description/lib/python3.12/site-packages'
+[0.607s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/single_joint_description/bin'
+[0.607s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/package.ps1'
+[0.608s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/package.dsv'
+[0.609s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/package.sh'
+[0.609s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/package.bash'
+[0.609s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/package.zsh'
+[0.610s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/baranidharan/gravity/install/single_joint_description/share/colcon-core/packages/single_joint_description)
+[0.610s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/baranidharan/gravity/src/gravity_compensation' with build type 'ament_cmake'
+[0.610s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/baranidharan/gravity/src/gravity_compensation'
+[0.610s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.611s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.615s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/baranidharan/gravity/src/dynamics' with build type 'ament_cmake'
+[0.616s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/baranidharan/gravity/src/dynamics'
+[0.617s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.617s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.622s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(posveleff_controllers)
+[0.623s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/posveleff_controllers' for CMake module files
+[0.623s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/posveleff_controllers' for CMake config files
+[0.623s] Level 1:colcon.colcon_core.shell:create_environment_hook('posveleff_controllers', 'cmake_prefix_path')
+[0.624s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/hook/cmake_prefix_path.ps1'
+[0.624s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/baranidharan/gravity/build/posveleff_controllers' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/baranidharan/gravity/build/posveleff_controllers
+[0.624s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/hook/cmake_prefix_path.dsv'
+[0.625s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/hook/cmake_prefix_path.sh'
+[0.626s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/posveleff_controllers/lib'
+[0.626s] Level 1:colcon.colcon_core.shell:create_environment_hook('posveleff_controllers', 'ld_library_path_lib')
+[0.626s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/hook/ld_library_path_lib.ps1'
+[0.627s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/hook/ld_library_path_lib.dsv'
+[0.627s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/hook/ld_library_path_lib.sh'
+[0.627s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/posveleff_controllers/bin'
+[0.628s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/posveleff_controllers/lib/pkgconfig/posveleff_controllers.pc'
+[0.628s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/posveleff_controllers/lib/python3.12/site-packages'
+[0.628s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/posveleff_controllers/bin'
+[0.628s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/package.ps1'
+[0.629s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/package.dsv'
+[0.629s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/package.sh'
+[0.630s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/package.bash'
+[0.630s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/package.zsh'
+[0.630s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/baranidharan/gravity/install/posveleff_controllers/share/colcon-core/packages/posveleff_controllers)
+[0.631s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(posveleff_controllers)
+[0.631s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/posveleff_controllers' for CMake module files
+[0.631s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/posveleff_controllers' for CMake config files
+[0.632s] Level 1:colcon.colcon_core.shell:create_environment_hook('posveleff_controllers', 'cmake_prefix_path')
+[0.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/hook/cmake_prefix_path.ps1'
+[0.632s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/hook/cmake_prefix_path.dsv'
+[0.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/hook/cmake_prefix_path.sh'
+[0.633s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/posveleff_controllers/lib'
+[0.633s] Level 1:colcon.colcon_core.shell:create_environment_hook('posveleff_controllers', 'ld_library_path_lib')
+[0.634s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/hook/ld_library_path_lib.ps1'
+[0.634s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/hook/ld_library_path_lib.dsv'
+[0.634s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/hook/ld_library_path_lib.sh'
+[0.634s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/posveleff_controllers/bin'
+[0.635s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/posveleff_controllers/lib/pkgconfig/posveleff_controllers.pc'
+[0.635s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/posveleff_controllers/lib/python3.12/site-packages'
+[0.635s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/posveleff_controllers/bin'
+[0.635s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/package.ps1'
+[0.636s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/package.dsv'
+[0.636s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/package.sh'
+[0.637s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/package.bash'
+[0.637s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/package.zsh'
+[0.637s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/baranidharan/gravity/install/posveleff_controllers/share/colcon-core/packages/posveleff_controllers)
+[0.643s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/baranidharan/gravity/build/gravity_compensation': CMAKE_PREFIX_PATH=/home/baranidharan/gravity/install/single_joint_description:/home/baranidharan/gravity/install/dynamics:/home/baranidharan/gravity/install/posveleff_controllers:/home/baranidharan/gravity/install/hw_interface:/home/baranidharan/gravity/install/gravity_compensation:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/baranidharan/gravity/build/gravity_compensation -- -j6 -l6
+[0.647s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/baranidharan/gravity/build/dynamics': CMAKE_PREFIX_PATH=/home/baranidharan/gravity/install/single_joint_description:/home/baranidharan/gravity/install/dynamics:/home/baranidharan/gravity/install/posveleff_controllers:/home/baranidharan/gravity/install/hw_interface:/home/baranidharan/gravity/install/gravity_compensation:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/baranidharan/gravity/build/dynamics -- -j6 -l6
+[0.863s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/baranidharan/gravity/build/gravity_compensation' returned '0': CMAKE_PREFIX_PATH=/home/baranidharan/gravity/install/single_joint_description:/home/baranidharan/gravity/install/dynamics:/home/baranidharan/gravity/install/posveleff_controllers:/home/baranidharan/gravity/install/hw_interface:/home/baranidharan/gravity/install/gravity_compensation:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/baranidharan/gravity/build/gravity_compensation -- -j6 -l6
+[0.864s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/baranidharan/gravity/build/gravity_compensation': CMAKE_PREFIX_PATH=/home/baranidharan/gravity/install/single_joint_description:/home/baranidharan/gravity/install/dynamics:/home/baranidharan/gravity/install/posveleff_controllers:/home/baranidharan/gravity/install/hw_interface:/home/baranidharan/gravity/install/gravity_compensation:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/baranidharan/gravity/build/gravity_compensation
+[0.880s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/baranidharan/gravity/build/dynamics' returned '0': CMAKE_PREFIX_PATH=/home/baranidharan/gravity/install/single_joint_description:/home/baranidharan/gravity/install/dynamics:/home/baranidharan/gravity/install/posveleff_controllers:/home/baranidharan/gravity/install/hw_interface:/home/baranidharan/gravity/install/gravity_compensation:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/baranidharan/gravity/build/dynamics -- -j6 -l6
+[0.881s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/baranidharan/gravity/build/dynamics': CMAKE_PREFIX_PATH=/home/baranidharan/gravity/install/single_joint_description:/home/baranidharan/gravity/install/dynamics:/home/baranidharan/gravity/install/posveleff_controllers:/home/baranidharan/gravity/install/hw_interface:/home/baranidharan/gravity/install/gravity_compensation:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/baranidharan/gravity/build/dynamics
+[0.882s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gravity_compensation)
+[0.882s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_compensation' for CMake module files
+[0.882s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/baranidharan/gravity/build/gravity_compensation' returned '0': CMAKE_PREFIX_PATH=/home/baranidharan/gravity/install/single_joint_description:/home/baranidharan/gravity/install/dynamics:/home/baranidharan/gravity/install/posveleff_controllers:/home/baranidharan/gravity/install/hw_interface:/home/baranidharan/gravity/install/gravity_compensation:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/baranidharan/gravity/build/gravity_compensation
+[0.886s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_compensation' for CMake config files
+[0.886s] Level 1:colcon.colcon_core.shell:create_environment_hook('gravity_compensation', 'cmake_prefix_path')
+[0.886s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/hook/cmake_prefix_path.ps1'
+[0.886s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/hook/cmake_prefix_path.dsv'
+[0.887s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/hook/cmake_prefix_path.sh'
+[0.887s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_compensation/lib'
+[0.887s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_compensation/bin'
+[0.887s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_compensation/lib/pkgconfig/gravity_compensation.pc'
+[0.888s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_compensation/lib/python3.12/site-packages'
+[0.888s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_compensation/bin'
+[0.888s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/package.ps1'
+[0.888s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/package.dsv'
+[0.889s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/package.sh'
+[0.889s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/package.bash'
+[0.889s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/package.zsh'
+[0.890s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/baranidharan/gravity/install/gravity_compensation/share/colcon-core/packages/gravity_compensation)
+[0.890s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gravity_compensation)
+[0.890s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_compensation' for CMake module files
+[0.891s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_compensation' for CMake config files
+[0.891s] Level 1:colcon.colcon_core.shell:create_environment_hook('gravity_compensation', 'cmake_prefix_path')
+[0.891s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/hook/cmake_prefix_path.ps1'
+[0.891s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/hook/cmake_prefix_path.dsv'
+[0.892s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/hook/cmake_prefix_path.sh'
+[0.892s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_compensation/lib'
+[0.893s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_compensation/bin'
+[0.894s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_compensation/lib/pkgconfig/gravity_compensation.pc'
+[0.895s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_compensation/lib/python3.12/site-packages'
+[0.895s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_compensation/bin'
+[0.895s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/package.ps1'
+[0.896s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/package.dsv'
+[0.897s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/package.sh'
+[0.898s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/package.bash'
+[0.898s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/package.zsh'
+[0.898s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/baranidharan/gravity/install/gravity_compensation/share/colcon-core/packages/gravity_compensation)
+[0.900s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamics)
+[0.900s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/dynamics' for CMake module files
+[0.900s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/baranidharan/gravity/build/dynamics' returned '0': CMAKE_PREFIX_PATH=/home/baranidharan/gravity/install/single_joint_description:/home/baranidharan/gravity/install/dynamics:/home/baranidharan/gravity/install/posveleff_controllers:/home/baranidharan/gravity/install/hw_interface:/home/baranidharan/gravity/install/gravity_compensation:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/baranidharan/gravity/build/dynamics
+[0.900s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/dynamics' for CMake config files
+[0.901s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamics', 'cmake_prefix_path')
+[0.901s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/dynamics/share/dynamics/hook/cmake_prefix_path.ps1'
+[0.901s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/dynamics/share/dynamics/hook/cmake_prefix_path.dsv'
+[0.901s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/dynamics/share/dynamics/hook/cmake_prefix_path.sh'
+[0.902s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/dynamics/lib'
+[0.902s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/dynamics/bin'
+[0.902s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/dynamics/lib/pkgconfig/dynamics.pc'
+[0.902s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/dynamics/lib/python3.12/site-packages'
+[0.902s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/dynamics/bin'
+[0.903s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/dynamics/share/dynamics/package.ps1'
+[0.903s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/baranidharan/gravity/install/dynamics/share/dynamics/package.dsv'
+[0.904s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/dynamics/share/dynamics/package.sh'
+[0.904s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/dynamics/share/dynamics/package.bash'
+[0.904s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/dynamics/share/dynamics/package.zsh'
+[0.905s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/baranidharan/gravity/install/dynamics/share/colcon-core/packages/dynamics)
+[0.905s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(dynamics)
+[0.905s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/dynamics' for CMake module files
+[0.906s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/dynamics' for CMake config files
+[0.906s] Level 1:colcon.colcon_core.shell:create_environment_hook('dynamics', 'cmake_prefix_path')
+[0.906s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/dynamics/share/dynamics/hook/cmake_prefix_path.ps1'
+[0.907s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/dynamics/share/dynamics/hook/cmake_prefix_path.dsv'
+[0.907s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/dynamics/share/dynamics/hook/cmake_prefix_path.sh'
+[0.908s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/dynamics/lib'
+[0.908s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/dynamics/bin'
+[0.908s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/dynamics/lib/pkgconfig/dynamics.pc'
+[0.908s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/dynamics/lib/python3.12/site-packages'
+[0.908s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/dynamics/bin'
+[0.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/dynamics/share/dynamics/package.ps1'
+[0.909s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/baranidharan/gravity/install/dynamics/share/dynamics/package.dsv'
+[0.910s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/dynamics/share/dynamics/package.sh'
+[0.910s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/dynamics/share/dynamics/package.bash'
+[0.911s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/dynamics/share/dynamics/package.zsh'
+[0.911s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/baranidharan/gravity/install/dynamics/share/colcon-core/packages/dynamics)
+[0.977s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/baranidharan/gravity/build/hw_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/baranidharan/gravity/build/hw_interface -- -j6 -l6
+[0.978s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/baranidharan/gravity/build/hw_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/baranidharan/gravity/build/hw_interface
+[1.068s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hw_interface)
+[1.068s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/hw_interface' for CMake module files
+[1.068s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/baranidharan/gravity/build/hw_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/baranidharan/gravity/build/hw_interface
+[1.069s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/hw_interface' for CMake config files
+[1.070s] Level 1:colcon.colcon_core.shell:create_environment_hook('hw_interface', 'cmake_prefix_path')
+[1.070s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/hook/cmake_prefix_path.ps1'
+[1.070s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/hook/cmake_prefix_path.dsv'
+[1.071s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/hook/cmake_prefix_path.sh'
+[1.072s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/hw_interface/lib'
+[1.072s] Level 1:colcon.colcon_core.shell:create_environment_hook('hw_interface', 'ld_library_path_lib')
+[1.072s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/hook/ld_library_path_lib.ps1'
+[1.072s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/hook/ld_library_path_lib.dsv'
+[1.072s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/hook/ld_library_path_lib.sh'
+[1.073s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/hw_interface/bin'
+[1.073s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/hw_interface/lib/pkgconfig/hw_interface.pc'
+[1.073s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages'
+[1.073s] Level 1:colcon.colcon_core.shell:create_environment_hook('hw_interface', 'pythonpath')
+[1.073s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/hook/pythonpath.ps1'
+[1.074s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/hook/pythonpath.dsv'
+[1.074s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/hook/pythonpath.sh'
+[1.075s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/hw_interface/bin'
+[1.075s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/package.ps1'
+[1.076s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/package.dsv'
+[1.077s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/package.sh'
+[1.077s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/package.bash'
+[1.077s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/package.zsh'
+[1.078s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/baranidharan/gravity/install/hw_interface/share/colcon-core/packages/hw_interface)
+[1.078s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hw_interface)
+[1.078s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/hw_interface' for CMake module files
+[1.079s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/hw_interface' for CMake config files
+[1.079s] Level 1:colcon.colcon_core.shell:create_environment_hook('hw_interface', 'cmake_prefix_path')
+[1.079s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/hook/cmake_prefix_path.ps1'
+[1.080s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/hook/cmake_prefix_path.dsv'
+[1.080s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/hook/cmake_prefix_path.sh'
+[1.082s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/hw_interface/lib'
+[1.082s] Level 1:colcon.colcon_core.shell:create_environment_hook('hw_interface', 'ld_library_path_lib')
+[1.082s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/hook/ld_library_path_lib.ps1'
+[1.082s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/hook/ld_library_path_lib.dsv'
+[1.082s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/hook/ld_library_path_lib.sh'
+[1.083s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/hw_interface/bin'
+[1.083s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/hw_interface/lib/pkgconfig/hw_interface.pc'
+[1.083s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages'
+[1.083s] Level 1:colcon.colcon_core.shell:create_environment_hook('hw_interface', 'pythonpath')
+[1.083s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/hook/pythonpath.ps1'
+[1.083s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/hook/pythonpath.dsv'
+[1.084s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/hook/pythonpath.sh'
+[1.085s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/hw_interface/bin'
+[1.085s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/package.ps1'
+[1.086s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/package.dsv'
+[1.087s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/package.sh'
+[1.087s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/package.bash'
+[1.087s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/hw_interface/share/hw_interface/package.zsh'
+[1.088s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/baranidharan/gravity/install/hw_interface/share/colcon-core/packages/hw_interface)
+[1.088s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/baranidharan/gravity/src/gravity_test' with build type 'ament_python'
+[1.088s] Level 1:colcon.colcon_core.shell:create_environment_hook('gravity_test', 'ament_prefix_path')
+[1.088s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/gravity_test/share/gravity_test/hook/ament_prefix_path.ps1'
+[1.089s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/gravity_test/share/gravity_test/hook/ament_prefix_path.dsv'
+[1.089s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/gravity_test/share/gravity_test/hook/ament_prefix_path.sh'
+[1.090s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.090s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.331s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/baranidharan/gravity/src/gravity_test'
+[1.332s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.332s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.407s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: pytest, dist_info, install_lib, alias, install_headers, develop, saveopts, rotate, ptr, upload_docs, clean, build, build_scripts, register, bdist_dumb, upload, editable_wheel, install_scripts, install_data, symlink_data, build_clib, bdist_wheel, egg_info, bdist, install, setopt, bdist_rpm, bdist_egg, compile_catalog, init_catalog, update_catalog, sdist, test, build_py, extract_messages, build_ext, install_egg_info, easy_install, check
+[1.411s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/baranidharan/gravity/src/analyzer': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/baranidharan/gravity/build/joint_analyzer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/joint_analyzer build --build-base /home/baranidharan/gravity/build/joint_analyzer/build install --record /home/baranidharan/gravity/build/joint_analyzer/install.log --install-scripts $base/lib/joint_analyzer --single-version-externally-managed install_data
+[1.908s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: pytest, dist_info, install_lib, alias, install_headers, develop, saveopts, rotate, ptr, upload_docs, clean, build, build_scripts, register, bdist_dumb, upload, editable_wheel, install_scripts, install_data, symlink_data, build_clib, bdist_wheel, egg_info, bdist, install, setopt, bdist_rpm, bdist_egg, compile_catalog, init_catalog, update_catalog, sdist, test, build_py, extract_messages, build_ext, install_egg_info, easy_install, check
+[1.909s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/baranidharan/gravity/src/gravity_test': CMAKE_PREFIX_PATH=/home/baranidharan/gravity/install/gravity_compensation:/home/baranidharan/gravity/install/single_joint_description:/home/baranidharan/gravity/install/posveleff_controllers:/home/baranidharan/gravity/install/hw_interface:/home/baranidharan/gravity/install/dynamics:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/baranidharan/gravity/build/gravity_test/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/baranidharan/gravity/install/gravity_test/lib/python3.12/site-packages:/home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages:/home/baranidharan/gravity/install/gravity_test/lib/python3.12/site-packages:/home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gravity_test build --build-base /home/baranidharan/gravity/build/gravity_test/build install --record /home/baranidharan/gravity/build/gravity_test/install.log --install-scripts $base/lib/gravity_test --single-version-externally-managed install_data
+[1.973s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/joint_analyzer' for CMake module files
+[1.974s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/joint_analyzer' for CMake config files
+[1.975s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/baranidharan/gravity/src/analyzer' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/baranidharan/gravity/build/joint_analyzer/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/joint_analyzer build --build-base /home/baranidharan/gravity/build/joint_analyzer/build install --record /home/baranidharan/gravity/build/joint_analyzer/install.log --install-scripts $base/lib/joint_analyzer --single-version-externally-managed install_data
+[1.976s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/joint_analyzer/lib'
+[1.976s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/joint_analyzer/bin'
+[1.976s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/joint_analyzer/lib/pkgconfig/joint_analyzer.pc'
+[1.976s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages'
+[1.976s] Level 1:colcon.colcon_core.shell:create_environment_hook('joint_analyzer', 'pythonpath')
+[1.977s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/joint_analyzer/share/joint_analyzer/hook/pythonpath.ps1'
+[1.977s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/joint_analyzer/share/joint_analyzer/hook/pythonpath.dsv'
+[1.978s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/joint_analyzer/share/joint_analyzer/hook/pythonpath.sh'
+[1.978s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/joint_analyzer/bin'
+[1.979s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(joint_analyzer)
+[1.979s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/joint_analyzer/share/joint_analyzer/package.ps1'
+[1.979s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/baranidharan/gravity/install/joint_analyzer/share/joint_analyzer/package.dsv'
+[1.980s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/joint_analyzer/share/joint_analyzer/package.sh'
+[1.981s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/joint_analyzer/share/joint_analyzer/package.bash'
+[1.981s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/joint_analyzer/share/joint_analyzer/package.zsh'
+[1.982s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/baranidharan/gravity/install/joint_analyzer/share/colcon-core/packages/joint_analyzer)
+[2.443s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_test' for CMake module files
+[2.444s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/baranidharan/gravity/src/gravity_test' returned '0': CMAKE_PREFIX_PATH=/home/baranidharan/gravity/install/gravity_compensation:/home/baranidharan/gravity/install/single_joint_description:/home/baranidharan/gravity/install/posveleff_controllers:/home/baranidharan/gravity/install/hw_interface:/home/baranidharan/gravity/install/dynamics:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/baranidharan/gravity/build/gravity_test/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/baranidharan/gravity/install/gravity_test/lib/python3.12/site-packages:/home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages:/home/baranidharan/gravity/install/gravity_test/lib/python3.12/site-packages:/home/baranidharan/gravity/install/joint_analyzer/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/gravity_test build --build-base /home/baranidharan/gravity/build/gravity_test/build install --record /home/baranidharan/gravity/build/gravity_test/install.log --install-scripts $base/lib/gravity_test --single-version-externally-managed install_data
+[2.445s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_test' for CMake config files
+[2.446s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_test/lib'
+[2.446s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_test/bin'
+[2.447s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_test/lib/pkgconfig/gravity_test.pc'
+[2.447s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_test/lib/python3.12/site-packages'
+[2.447s] Level 1:colcon.colcon_core.shell:create_environment_hook('gravity_test', 'pythonpath')
+[2.447s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/gravity_test/share/gravity_test/hook/pythonpath.ps1'
+[2.447s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/baranidharan/gravity/install/gravity_test/share/gravity_test/hook/pythonpath.dsv'
+[2.449s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/baranidharan/gravity/install/gravity_test/share/gravity_test/hook/pythonpath.sh'
+[2.449s] Level 1:colcon.colcon_core.environment:checking '/home/baranidharan/gravity/install/gravity_test/bin'
+[2.449s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gravity_test)
+[2.450s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/gravity_test/share/gravity_test/package.ps1'
+[2.450s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/baranidharan/gravity/install/gravity_test/share/gravity_test/package.dsv'
+[2.451s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/gravity_test/share/gravity_test/package.sh'
+[2.451s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/gravity_test/share/gravity_test/package.bash'
+[2.452s] INFO:colcon.colcon_core.shell:Creating package script '/home/baranidharan/gravity/install/gravity_test/share/gravity_test/package.zsh'
+[2.452s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/baranidharan/gravity/install/gravity_test/share/colcon-core/packages/gravity_test)
+[2.452s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.453s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.453s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.453s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.455s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.455s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/baranidharan/gravity/install/local_setup.ps1'
+[2.456s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/baranidharan/gravity/install/_local_setup_util_ps1.py'
+[2.457s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/baranidharan/gravity/install/setup.ps1'
+[2.458s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/baranidharan/gravity/install/local_setup.sh'
+[2.459s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/baranidharan/gravity/install/_local_setup_util_sh.py'
+[2.459s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/baranidharan/gravity/install/setup.sh'
+[2.460s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/baranidharan/gravity/install/local_setup.bash'
+[2.461s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/baranidharan/gravity/install/setup.bash'
+[2.462s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/baranidharan/gravity/install/local_setup.zsh'
+[2.464s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/baranidharan/gravity/install/setup.zsh'

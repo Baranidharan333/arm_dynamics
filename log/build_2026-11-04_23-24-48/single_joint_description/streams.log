@@ -1,0 +1,35 @@
+[0.037s] Invoking command in '/home/baranidharan/gravity/build/single_joint_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/baranidharan/gravity/src/urdf -DCMAKE_INSTALL_PREFIX=/home/baranidharan/gravity/install/single_joint_description
+[0.084s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.249s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.463s] -- Configuring done (0.4s)
+[0.465s] -- Generating done (0.0s)
+[0.467s] -- Build files have been written to: /home/baranidharan/gravity/build/single_joint_description
+[0.472s] Invoked command in '/home/baranidharan/gravity/build/single_joint_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/baranidharan/gravity/src/urdf -DCMAKE_INSTALL_PREFIX=/home/baranidharan/gravity/install/single_joint_description
+[0.473s] Invoking command in '/home/baranidharan/gravity/build/single_joint_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/baranidharan/gravity/build/single_joint_description -- -j6 -l6
+[0.514s] Invoked command in '/home/baranidharan/gravity/build/single_joint_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/baranidharan/gravity/build/single_joint_description -- -j6 -l6
+[0.525s] Invoking command in '/home/baranidharan/gravity/build/single_joint_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/baranidharan/gravity/build/single_joint_description
+[0.533s] -- Install configuration: ""
+[0.533s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/urdf
+[0.533s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/urdf/single_joint_1kg.urdf
+[0.533s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/launch
+[0.533s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/launch/display.launch.py
+[0.534s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/rviz
+[0.534s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/rviz/display.rviz
+[0.534s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/meshes
+[0.534s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/meshes/dm4340p.stl
+[0.539s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/ament_index/resource_index/package_run_dependencies/single_joint_description
+[0.539s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/ament_index/resource_index/parent_prefix_path/single_joint_description
+[0.539s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/environment/ament_prefix_path.sh
+[0.539s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/environment/ament_prefix_path.dsv
+[0.539s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/environment/path.sh
+[0.540s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/environment/path.dsv
+[0.540s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/local_setup.bash
+[0.540s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/local_setup.sh
+[0.540s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/local_setup.zsh
+[0.540s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/local_setup.dsv
+[0.541s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/package.dsv
+[0.541s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/ament_index/resource_index/packages/single_joint_description
+[0.541s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/cmake/single_joint_descriptionConfig.cmake
+[0.541s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/cmake/single_joint_descriptionConfig-version.cmake
+[0.541s] -- Installing: /home/baranidharan/gravity/install/single_joint_description/share/single_joint_description/package.xml
+[0.544s] Invoked command in '/home/baranidharan/gravity/build/single_joint_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/baranidharan/gravity/build/single_joint_description

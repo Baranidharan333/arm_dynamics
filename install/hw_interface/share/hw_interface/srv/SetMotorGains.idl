@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from hw_interface/srv/SetMotorGains.srv
+// generated code does not contain a copyright notice
+
+
+module hw_interface {
+  module srv {
+    struct SetMotorGains_Request {
+      sequence<int32> motor_ids;
+
+      sequence<float> kp;
+
+      sequence<float> kd;
+    };
+    struct SetMotorGains_Response {
+      boolean success;
+
+      string message;
+    };
+  };
+};

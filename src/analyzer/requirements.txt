@@ -1,0 +1,10 @@
+# Joint Command vs Joint State Analyzer – Python Dependencies
+#
+# Install with:
+#   pip install -r requirements.txt
+#
+# Note: rclpy is provided by ROS 2 and should NOT be installed via pip.
+#       Make sure to source your ROS 2 installation before running:
+#       source /opt/ros/<distro>/setup.bash
+
+Flask>=3.0.0

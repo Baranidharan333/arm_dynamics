@@ -1,0 +1,58 @@
+[0.043s] Invoking command in '/home/baranidharan/gravity/build/dynamics': AMENT_PREFIX_PATH=/home/baranidharan/gravity/install/dynamics:/home/baranidharan/gravity/install/single_joint_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/baranidharan/gravity/install/dynamics:/home/baranidharan/gravity/install/single_joint_description:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process -R test_robot_dynamics
+[0.051s] UpdateCTestConfiguration  from :/home/baranidharan/gravity/build/dynamics/CTestConfiguration.ini
+[0.052s] Parse Config file:/home/baranidharan/gravity/build/dynamics/CTestConfiguration.ini
+[0.052s]    Site: JAZZY
+[0.053s]    Build name: (empty)
+[0.054s]  Add coverage exclude regular expressions.
+[0.054s] Create new tag: 20261105-1143 - Experimental
+[0.054s] UpdateCTestConfiguration  from :/home/baranidharan/gravity/build/dynamics/CTestConfiguration.ini
+[0.054s] Parse Config file:/home/baranidharan/gravity/build/dynamics/CTestConfiguration.ini
+[0.054s] Test project /home/baranidharan/gravity/build/dynamics
+[0.055s] Constructing a list of tests
+[0.055s] Done constructing a list of tests
+[0.055s] Updating test list for fixtures
+[0.055s] Added 0 tests to meet fixture requirements
+[0.055s] Checking test dependency graph...
+[0.055s] Checking test dependency graph end
+[0.055s] test 1
+[0.055s]     Start 1: test_robot_dynamics
+[0.055s] 
+[0.055s] 1: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/baranidharan/gravity/build/dynamics/test_results/dynamics/test_robot_dynamics.gtest.xml" "--package-name" "dynamics" "--output-file" "/home/baranidharan/gravity/build/dynamics/ament_cmake_gtest/test_robot_dynamics.txt" "--command" "/home/baranidharan/gravity/build/dynamics/test_robot_dynamics" "--gtest_output=xml:/home/baranidharan/gravity/build/dynamics/test_results/dynamics/test_robot_dynamics.gtest.xml"
+[0.055s] 1: Working Directory: /home/baranidharan/gravity/build/dynamics
+[0.055s] 1: Test timeout computed to be: 60
+[0.138s] 1: -- run_test.py: invoking following command in '/home/baranidharan/gravity/build/dynamics':
+[0.138s] 1:  - /home/baranidharan/gravity/build/dynamics/test_robot_dynamics --gtest_output=xml:/home/baranidharan/gravity/build/dynamics/test_results/dynamics/test_robot_dynamics.gtest.xml
+[0.149s] 1: Running main() from /opt/ros/jazzy/src/gtest_vendor/src/gtest_main.cc
+[0.149s] 1: [==========] Running 5 tests from 1 test suite.
+[0.149s] 1: [----------] Global test environment set-up.
+[0.149s] 1: [----------] 5 tests from DualJointDynamics
+[0.149s] 1: [ RUN      ] DualJointDynamics.JointsInOrder
+[0.150s] 1: [       OK ] DualJointDynamics.JointsInOrder (1 ms)
+[0.150s] 1: [ RUN      ] DualJointDynamics.MatchesPlanar2R
+[0.150s] 1: [       OK ] DualJointDynamics.MatchesPlanar2R (0 ms)
+[0.150s] 1: [ RUN      ] DualJointDynamics.GravityMatchesKdlNodeOnRig
+[0.150s] 1: [       OK ] DualJointDynamics.GravityMatchesKdlNodeOnRig (0 ms)
+[0.150s] 1: [ RUN      ] DualJointDynamics.SplitAndInverseAreConsistent
+[0.150s] 1: [       OK ] DualJointDynamics.SplitAndInverseAreConsistent (0 ms)
+[0.150s] 1: [ RUN      ] DualJointDynamics.RejectsWrongSize
+[0.151s] 1: [       OK ] DualJointDynamics.RejectsWrongSize (0 ms)
+[0.151s] 1: [----------] 5 tests from DualJointDynamics (2 ms total)
+[0.151s] 1: 
+[0.151s] 1: [----------] Global test environment tear-down
+[0.151s] 1: [==========] 5 tests from 1 test suite ran. (2 ms total)
+[0.151s] 1: [  PASSED  ] 5 tests.
+[0.152s] 1: -- run_test.py: return code 0
+[0.152s] 1: -- run_test.py: inject classname prefix into gtest result file '/home/baranidharan/gravity/build/dynamics/test_results/dynamics/test_robot_dynamics.gtest.xml'
+[0.152s] 1: -- run_test.py: verify result file '/home/baranidharan/gravity/build/dynamics/test_results/dynamics/test_robot_dynamics.gtest.xml'
+[0.165s] 1/1 Test #1: test_robot_dynamics ..............   Passed    0.11 sec
+[0.165s] 
+[0.165s] The following tests passed:
+[0.165s] 	test_robot_dynamics
+[0.165s] 
+[0.165s] 100% tests passed, 0 tests failed out of 1
+[0.165s] 
+[0.165s] Label Time Summary:
+[0.165s] gtest    =   0.11 sec*proc (1 test)
+[0.165s] 
+[0.165s] Total Test time (real) =   0.11 sec
+[0.167s] Invoked command in '/home/baranidharan/gravity/build/dynamics' returned '0': AMENT_PREFIX_PATH=/home/baranidharan/gravity/install/dynamics:/home/baranidharan/gravity/install/single_joint_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/baranidharan/gravity/install/dynamics:/home/baranidharan/gravity/install/single_joint_description:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process -R test_robot_dynamics

@@ -1,0 +1,11 @@
+source;share/posveleff_controllers/hook/cmake_prefix_path.ps1
+source;share/posveleff_controllers/hook/cmake_prefix_path.dsv
+source;share/posveleff_controllers/hook/cmake_prefix_path.sh
+source;share/posveleff_controllers/hook/ld_library_path_lib.ps1
+source;share/posveleff_controllers/hook/ld_library_path_lib.dsv
+source;share/posveleff_controllers/hook/ld_library_path_lib.sh
+source;share/posveleff_controllers/local_setup.bash
+source;share/posveleff_controllers/local_setup.dsv
+source;share/posveleff_controllers/local_setup.ps1
+source;share/posveleff_controllers/local_setup.sh
+source;share/posveleff_controllers/local_setup.zsh

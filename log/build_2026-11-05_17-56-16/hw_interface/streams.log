@@ -1,0 +1,234 @@
+[0.028s] Invoking command in '/home/baranidharan/gravity/build/hw_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/baranidharan/gravity/build/hw_interface -- -j6 -l6
+[0.082s] [  3%] Built target hw_interface__rs
+[0.082s] [  3%] Built target hw_interface__rosidl_generator_type_description
+[0.091s] [  6%] Built target can_bridge_node
+[0.097s] [  6%] Built target ament_cmake_python_copy_hw_interface
+[0.101s] [  8%] Built target hw_interface__cpp
+[0.105s] [ 27%] Built target hw_interface__rosidl_generator_c
+[0.129s] [ 44%] Built target hw_interface__rosidl_typesupport_c
+[0.129s] [ 44%] Built target hw_interface__rosidl_typesupport_introspection_c
+[0.130s] [ 52%] Built target hw_interface__rosidl_typesupport_fastrtps_cpp
+[0.144s] [ 61%] Built target hw_interface__rosidl_typesupport_introspection_cpp
+[0.149s] [ 69%] Built target hw_interface__rosidl_typesupport_fastrtps_c
+[0.163s] [ 77%] Built target hw_interface__rosidl_typesupport_cpp
+[0.187s] [ 77%] Built target hw_interface
+[0.194s] [ 81%] Built target hw_interface_plugin
+[0.210s] [ 83%] Built target hw_interface__py
+[0.237s] [ 89%] Built target hw_interface__rosidl_generator_py
+[0.261s] [ 93%] Built target hw_interface_s__rosidl_typesupport_introspection_c
+[0.265s] [ 96%] Built target hw_interface_s__rosidl_typesupport_fastrtps_c
+[0.266s] [100%] Built target hw_interface_s__rosidl_typesupport_c
+[0.310s] running egg_info
+[0.330s] writing hw_interface.egg-info/PKG-INFO
+[0.334s] writing dependency_links to hw_interface.egg-info/dependency_links.txt
+[0.334s] writing top-level names to hw_interface.egg-info/top_level.txt
+[0.410s] reading manifest file 'hw_interface.egg-info/SOURCES.txt'
+[0.410s] writing manifest file 'hw_interface.egg-info/SOURCES.txt'
+[0.439s] [100%] Built target ament_cmake_python_build_hw_interface_egg
+[0.452s] Invoked command in '/home/baranidharan/gravity/build/hw_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/baranidharan/gravity/build/hw_interface -- -j6 -l6
+[0.452s] Invoking command in '/home/baranidharan/gravity/build/hw_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/baranidharan/gravity/build/hw_interface
+[0.462s] -- Install configuration: ""
+[0.462s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/ament_index/resource_index/rosidl_interfaces/hw_interface
+[0.462s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/msg/MotorStatus.json
+[0.462s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/msg/MotorStatusArray.json
+[0.462s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/srv/SetMotorGains.json
+[0.462s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface
+[0.463s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv
+[0.463s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/set_motor_gains.h
+[0.463s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail
+[0.463s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail/set_motor_gains__struct.h
+[0.463s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail/set_motor_gains__functions.h
+[0.463s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail/set_motor_gains__type_support.c
+[0.463s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail/set_motor_gains__description.c
+[0.463s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail/set_motor_gains__type_support.h
+[0.463s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail/set_motor_gains__functions.c
+[0.463s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg
+[0.463s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/motor_status.h
+[0.463s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/rosidl_generator_c__visibility_control.h
+[0.463s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/motor_status_array.h
+[0.463s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail
+[0.463s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status__description.c
+[0.463s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status_array__functions.c
+[0.464s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status__functions.h
+[0.464s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status__struct.h
+[0.464s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status__type_support.h
+[0.464s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status_array__functions.h
+[0.464s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status__functions.c
+[0.464s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status_array__struct.h
+[0.464s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status__type_support.c
+[0.464s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status_array__description.c
+[0.464s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status_array__type_support.h
+[0.464s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status_array__type_support.c
+[0.464s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/environment/library_path.sh
+[0.464s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/environment/library_path.dsv
+[0.464s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/libhw_interface__rosidl_generator_c.so
+[0.464s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface
+[0.464s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv
+[0.465s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail
+[0.465s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail/set_motor_gains__rosidl_typesupport_fastrtps_c.h
+[0.465s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg
+[0.465s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.465s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail
+[0.465s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status_array__rosidl_typesupport_fastrtps_c.h
+[0.465s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status__rosidl_typesupport_fastrtps_c.h
+[0.465s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/libhw_interface__rosidl_typesupport_fastrtps_c.so
+[0.465s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface
+[0.465s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv
+[0.465s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail
+[0.465s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail/set_motor_gains__struct.hpp
+[0.465s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail/set_motor_gains__traits.hpp
+[0.465s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail/set_motor_gains__type_support.hpp
+[0.465s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail/set_motor_gains__builder.hpp
+[0.465s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/set_motor_gains.hpp
+[0.465s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg
+[0.465s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/motor_status.hpp
+[0.466s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/motor_status_array.hpp
+[0.466s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.466s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail
+[0.466s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status_array__traits.hpp
+[0.466s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status_array__builder.hpp
+[0.466s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status__type_support.hpp
+[0.466s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status__struct.hpp
+[0.466s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status__builder.hpp
+[0.466s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status_array__type_support.hpp
+[0.466s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status_array__struct.hpp
+[0.466s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status__traits.hpp
+[0.466s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface
+[0.466s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv
+[0.466s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail
+[0.466s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail/dds_fastrtps
+[0.466s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail/set_motor_gains__rosidl_typesupport_fastrtps_cpp.hpp
+[0.466s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg
+[0.466s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail
+[0.467s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/dds_fastrtps
+[0.467s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status_array__rosidl_typesupport_fastrtps_cpp.hpp
+[0.467s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status__rosidl_typesupport_fastrtps_cpp.hpp
+[0.467s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.467s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/libhw_interface__rosidl_typesupport_fastrtps_cpp.so
+[0.467s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface
+[0.467s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv
+[0.467s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail
+[0.467s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail/set_motor_gains__type_support.c
+[0.467s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail/set_motor_gains__rosidl_typesupport_introspection_c.h
+[0.467s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg
+[0.467s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail
+[0.467s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status_array__rosidl_typesupport_introspection_c.h
+[0.467s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status__type_support.c
+[0.467s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status__rosidl_typesupport_introspection_c.h
+[0.467s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status_array__type_support.c
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/libhw_interface__rosidl_typesupport_introspection_c.so
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/libhw_interface__rosidl_typesupport_c.so
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail/set_motor_gains__type_support.cpp
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/srv/detail/set_motor_gains__rosidl_typesupport_introspection_cpp.hpp
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status__rosidl_typesupport_introspection_cpp.hpp
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status_array__type_support.cpp
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status__type_support.cpp
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/hw_interface/msg/detail/motor_status_array__rosidl_typesupport_introspection_cpp.hpp
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/libhw_interface__rosidl_typesupport_introspection_cpp.so
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/libhw_interface__rosidl_typesupport_cpp.so
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/environment/pythonpath.sh
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/environment/pythonpath.dsv
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface-0.0.0-py3.12.egg-info
+[0.468s] -- Installing: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface-0.0.0-py3.12.egg-info/PKG-INFO
+[0.468s] -- Installing: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface-0.0.0-py3.12.egg-info/SOURCES.txt
+[0.468s] -- Installing: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface-0.0.0-py3.12.egg-info/top_level.txt
+[0.468s] -- Installing: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface-0.0.0-py3.12.egg-info/dependency_links.txt
+[0.468s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface
+[0.469s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/_hw_interface_s.ep.rosidl_typesupport_introspection_c.c
+[0.469s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/_hw_interface_s.ep.rosidl_typesupport_c.c
+[0.469s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/_hw_interface_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.469s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/srv
+[0.469s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/srv/_set_motor_gains_s.c
+[0.469s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/srv/_set_motor_gains.py
+[0.469s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/srv/__init__.py
+[0.469s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/__init__.py
+[0.469s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/hw_interface_s__rosidl_typesupport_introspection_c.so
+[0.469s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/hw_interface_s__rosidl_typesupport_fastrtps_c.so
+[0.469s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/msg
+[0.469s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/msg/__init__.py
+[0.469s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/msg/_motor_status_s.c
+[0.469s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/msg/_motor_status_array.py
+[0.469s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/msg/_motor_status.py
+[0.469s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/msg/_motor_status_array_s.c
+[0.469s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/hw_interface_s__rosidl_typesupport_c.so
+[0.497s] Listing '/home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface'...
+[0.497s] Listing '/home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/msg'...
+[0.497s] Listing '/home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/srv'...
+[0.503s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/hw_interface_s__rosidl_typesupport_fastrtps_c.so
+[0.503s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/hw_interface_s__rosidl_typesupport_introspection_c.so
+[0.503s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/python3.12/site-packages/hw_interface/hw_interface_s__rosidl_typesupport_c.so
+[0.504s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/libhw_interface__rosidl_generator_py.so
+[0.504s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/rust
+[0.504s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/rust/Cargo.toml
+[0.504s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/rust/build.rs
+[0.504s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/rust/src
+[0.504s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/rust/src/lib.rs
+[0.504s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/rust/src/msg.rs
+[0.506s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/rust/src/srv
+[0.506s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/rust/src/srv/rmw.rs
+[0.506s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/rust/src/msg
+[0.506s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/rust/src/msg/rmw.rs
+[0.506s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/rust/src/srv.rs
+[0.506s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/msg/MotorStatus.idl
+[0.506s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/msg/MotorStatusArray.idl
+[0.506s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/srv/SetMotorGains.idl
+[0.506s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/msg/MotorStatus.msg
+[0.506s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/msg/MotorStatusArray.msg
+[0.507s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/srv/SetMotorGains.srv
+[0.507s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/hw_interface/can_bridge_node
+[0.507s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/my_robot_hardware_interface.xml
+[0.507s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/my_robot_hardware_interface.xml
+[0.507s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/lib/libhw_interface_plugin.so
+[0.507s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include
+[0.507s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface
+[0.507s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/socketcan_transport.hpp
+[0.507s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/arm_interface.hpp
+[0.507s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/include/hw_interface/driver.hpp
+[0.507s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/ament_index/resource_index/package_run_dependencies/hw_interface
+[0.507s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/ament_index/resource_index/parent_prefix_path/hw_interface
+[0.507s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/environment/ament_prefix_path.sh
+[0.507s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/environment/ament_prefix_path.dsv
+[0.507s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/environment/path.sh
+[0.507s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/environment/path.dsv
+[0.507s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/local_setup.bash
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/local_setup.sh
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/local_setup.zsh
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/local_setup.dsv
+[0.508s] -- Installing: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/package.dsv
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/ament_index/resource_index/packages/hw_interface
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/hw_interface
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/export_hw_interface__rosidl_generator_cExport.cmake
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/export_hw_interface__rosidl_generator_cExport-noconfig.cmake
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/export_hw_interface__rosidl_typesupport_fastrtps_cExport.cmake
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/export_hw_interface__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/export_hw_interface__rosidl_generator_cppExport.cmake
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/export_hw_interface__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/export_hw_interface__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/hw_interface__rosidl_typesupport_introspection_cExport.cmake
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/hw_interface__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/hw_interface__rosidl_typesupport_cExport.cmake
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/hw_interface__rosidl_typesupport_cExport-noconfig.cmake
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/hw_interface__rosidl_typesupport_introspection_cppExport.cmake
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/hw_interface__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/hw_interface__rosidl_typesupport_cppExport.cmake
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/hw_interface__rosidl_typesupport_cppExport-noconfig.cmake
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/export_hw_interface__rosidl_generator_pyExport.cmake
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/export_hw_interface__rosidl_generator_pyExport-noconfig.cmake
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/rosidl_cmake-extras.cmake
+[0.508s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.509s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.509s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/ament_cmake_export_libraries-extras.cmake
+[0.509s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/ament_cmake_export_targets-extras.cmake
+[0.509s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.509s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.509s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[0.509s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/hw_interfaceConfig.cmake
+[0.509s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/cmake/hw_interfaceConfig-version.cmake
+[0.509s] -- Up-to-date: /home/baranidharan/gravity/install/hw_interface/share/hw_interface/package.xml
+[0.510s] Invoked command in '/home/baranidharan/gravity/build/hw_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/home/baranidharan/gravity/install/joint_analyzer:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/baranidharan/gravity/build/hw_interface

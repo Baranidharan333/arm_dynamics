@@ -1,0 +1,28 @@
+[0.024s] Invoking command in '/home/baranidharan/gravity/build/gravity_compensation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/baranidharan/gravity/build/gravity_compensation -- -j6 -l6
+[0.075s] [ 30%] Built target gravity_compensation_lib
+[0.075s] [ 30%] Built target gmock_main
+[0.077s] [ 53%] Built target gmock
+[0.097s] [ 69%] Built target gravity_check
+[0.097s] [ 84%] Built target test_gravity_model
+[0.101s] [100%] Built target gravity_torque_node
+[0.113s] Invoked command in '/home/baranidharan/gravity/build/gravity_compensation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/baranidharan/gravity/build/gravity_compensation -- -j6 -l6
+[0.114s] Invoking command in '/home/baranidharan/gravity/build/gravity_compensation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/baranidharan/gravity/build/gravity_compensation
+[0.122s] -- Install configuration: "Release"
+[0.122s] -- Up-to-date: /home/baranidharan/gravity/install/gravity_compensation/lib/gravity_compensation/gravity_torque_node
+[0.122s] -- Up-to-date: /home/baranidharan/gravity/install/gravity_compensation/lib/gravity_compensation/gravity_check
+[0.122s] -- Up-to-date: /home/baranidharan/gravity/install/gravity_compensation/share/ament_index/resource_index/package_run_dependencies/gravity_compensation
+[0.122s] -- Up-to-date: /home/baranidharan/gravity/install/gravity_compensation/share/ament_index/resource_index/parent_prefix_path/gravity_compensation
+[0.122s] -- Up-to-date: /home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/environment/ament_prefix_path.sh
+[0.122s] -- Up-to-date: /home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/environment/ament_prefix_path.dsv
+[0.122s] -- Up-to-date: /home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/environment/path.sh
+[0.122s] -- Up-to-date: /home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/environment/path.dsv
+[0.122s] -- Up-to-date: /home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/local_setup.bash
+[0.122s] -- Up-to-date: /home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/local_setup.sh
+[0.123s] -- Up-to-date: /home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/local_setup.zsh
+[0.123s] -- Up-to-date: /home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/local_setup.dsv
+[0.123s] -- Installing: /home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/package.dsv
+[0.123s] -- Up-to-date: /home/baranidharan/gravity/install/gravity_compensation/share/ament_index/resource_index/packages/gravity_compensation
+[0.123s] -- Up-to-date: /home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/cmake/gravity_compensationConfig.cmake
+[0.123s] -- Up-to-date: /home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/cmake/gravity_compensationConfig-version.cmake
+[0.123s] -- Up-to-date: /home/baranidharan/gravity/install/gravity_compensation/share/gravity_compensation/package.xml
+[0.127s] Invoked command in '/home/baranidharan/gravity/build/gravity_compensation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/baranidharan/gravity/build/gravity_compensation

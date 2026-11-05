@@ -1,0 +1,68 @@
+[0.030s] Invoking command in '/home/baranidharan/gravity/build/posveleff_controllers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/baranidharan/gravity/src/posveleff_controllers -DCMAKE_INSTALL_PREFIX=/home/baranidharan/gravity/install/posveleff_controllers
+[0.114s] -- The C compiler identification is GNU 13.3.0
+[0.185s] -- The CXX compiler identification is GNU 13.3.0
+[0.204s] -- Detecting C compiler ABI info
+[0.287s] -- Detecting C compiler ABI info - done
+[0.295s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.295s] -- Detecting C compile features
+[0.295s] -- Detecting C compile features - done
+[0.304s] -- Detecting CXX compiler ABI info
+[0.394s] -- Detecting CXX compiler ABI info - done
+[0.405s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.405s] -- Detecting CXX compile features
+[0.405s] -- Detecting CXX compile features - done
+[0.410s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.548s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.673s] -- Found controller_interface: 4.48.1 (/opt/ros/jazzy/share/controller_interface/cmake)
+[0.747s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.764s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.783s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.804s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.057s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.110s] -- Found rmw_implementation_cmake: 7.3.4 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.114s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.141s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.206s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.209s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.224s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.227s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.235s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.246s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.372s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0")  
+[1.649s] -- Configuring done (1.6s)
+[1.668s] -- Generating done (0.0s)
+[1.672s] -- Build files have been written to: /home/baranidharan/gravity/build/posveleff_controllers
+[1.683s] Invoked command in '/home/baranidharan/gravity/build/posveleff_controllers' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/baranidharan/gravity/src/posveleff_controllers -DCMAKE_INSTALL_PREFIX=/home/baranidharan/gravity/install/posveleff_controllers
+[1.684s] Invoking command in '/home/baranidharan/gravity/build/posveleff_controllers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/baranidharan/gravity/build/posveleff_controllers -- -j6 -l6
+[1.743s] [ 50%] [32mBuilding CXX object CMakeFiles/posveleff_controller.dir/src/posveleff_controller.cpp.o[0m
+[10.792s] [100%] [32m[1mLinking CXX shared library libposveleff_controller.so[0m
+[11.162s] [100%] Built target posveleff_controller
+[11.176s] Invoked command in '/home/baranidharan/gravity/build/posveleff_controllers' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/baranidharan/gravity/build/posveleff_controllers -- -j6 -l6
+[11.177s] Invoking command in '/home/baranidharan/gravity/build/posveleff_controllers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/baranidharan/gravity/build/posveleff_controllers
+[11.186s] -- Install configuration: ""
+[11.187s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/controller_plugins.xml
+[11.198s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/lib/libposveleff_controller.so
+[11.203s] -- Set non-toolchain portion of runtime path of "/home/baranidharan/gravity/install/posveleff_controllers/lib/libposveleff_controller.so" to ""
+[11.203s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/include
+[11.203s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/include/posveleff_controllers
+[11.203s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/include/posveleff_controllers/posveleff_controller.hpp
+[11.203s] -- Up-to-date: /home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/controller_plugins.xml
+[11.203s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/ament_index/resource_index/package_run_dependencies/posveleff_controllers
+[11.204s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/ament_index/resource_index/parent_prefix_path/posveleff_controllers
+[11.204s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/environment/ament_prefix_path.sh
+[11.204s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/environment/ament_prefix_path.dsv
+[11.204s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/environment/path.sh
+[11.205s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/environment/path.dsv
+[11.205s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/local_setup.bash
+[11.205s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/local_setup.sh
+[11.205s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/local_setup.zsh
+[11.206s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/local_setup.dsv
+[11.206s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/package.dsv
+[11.206s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/ament_index/resource_index/packages/posveleff_controllers
+[11.206s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/ament_index/resource_index/controller_interface__pluginlib__plugin/posveleff_controllers
+[11.207s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/cmake/ament_cmake_export_include_directories-extras.cmake
+[11.207s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/cmake/ament_cmake_export_dependencies-extras.cmake
+[11.207s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/cmake/posveleff_controllersConfig.cmake
+[11.207s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/cmake/posveleff_controllersConfig-version.cmake
+[11.207s] -- Installing: /home/baranidharan/gravity/install/posveleff_controllers/share/posveleff_controllers/package.xml
+[11.212s] Invoked command in '/home/baranidharan/gravity/build/posveleff_controllers' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baranidharan/gravity/install/gravity_test:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/baranidharan/gravity/build/posveleff_controllers

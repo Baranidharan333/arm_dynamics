@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>dynamics</name>
+  <version>0.1.0</version>
+  <description>
+    Rigid-body dynamics from a URDF with Pinocchio: M(q) qdd + C(q, qd) qd + G(q) = tau.
+    Library, offline tool (dynamics_info) and a node that publishes the terms from /joint_states.
+  </description>
+  <maintainer email="ihrphysicalai@gmail.com">baranidharan</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>pinocchio</depend>
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+
+  <!-- dynamics.launch.py: rig bring-up (no gravity_compensation) -->
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>gravity_test</exec_depend>
+  <exec_depend>hw_interface</exec_depend>
+  <exec_depend>joint_state_publisher_gui</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>single_joint_description</exec_depend>
+
+  <test_depend>ament_cmake_gtest</test_depend>
+  <test_depend>single_joint_description</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

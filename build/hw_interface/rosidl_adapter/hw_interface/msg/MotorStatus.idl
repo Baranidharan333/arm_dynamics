@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from hw_interface/msg/MotorStatus.msg
+// generated code does not contain a copyright notice
+
+
+module hw_interface {
+  module msg {
+    struct MotorStatus {
+      string arm_name;
+
+      int32 id;
+
+      int32 error;
+
+      string error_name;
+
+      float mos_temp;
+
+      float rotor_temp;
+    };
+  };
+};

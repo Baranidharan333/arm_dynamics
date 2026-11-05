@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "hw_interface__py",
+		"source" : "/home/baranidharan/gravity/build/hw_interface/hw_interface__py"
+	}
+}

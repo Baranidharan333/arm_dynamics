@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joint Command vs Joint State Analyzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="app">
+
+    <header class="header">
+      <h1>&#9881; Leader vs Follower Joint State Analyzer</h1>
+      <span class="subtitle">ROS 2 Debug Tool</span>
+    </header>
+
+    <section class="panel" id="connection-panel">
+      <h2 class="panel-title">Connection</h2>
+
+      <div class="domain-row">
+        <label for="domain-id">ROS Domain ID:</label>
+        <input type="number" id="domain-id" min="0" max="232" value="0">
+        <button id="domain-apply-btn" class="btn btn-small">Apply</button>
+        <span id="domain-status">Current: 0</span>
+      </div>
+
+      <hr class="sep">
+
+      <div class="topic-row">
+        <label>Follower Command [/jnt_cmt_to_ctrl]:</label>
+        <span class="dot" id="cmd-dot">&#9679;</span>
+        <input type="text" id="cmd-topic" list="topics-list" value="/jnt_cmt_to_ctrl">
+      </div>
+
+      <div class="topic-row">
+        <label>Follower Actual [/joint_states]:</label>
+        <span class="dot" id="state-dot">&#9679;</span>
+        <input type="text" id="state-topic" list="topics-list" value="/joint_states">
+      </div>
+
+      <datalist id="topics-list"></datalist>
+
+      <div class="btn-row">
+        <button id="connect-btn" class="btn btn-connect">Connect</button>
+        <button id="refresh-btn" class="btn btn-secondary">&#8635; Refresh</button>
+        <span class="spacer"></span>
+        <label class="checkbox-label">
+          <input type="checkbox" id="deg-chk" checked>
+          Show in Degrees (&deg;)
+        </label>
+      </div>
+
+      <div id="status-line" class="status status-disconnected">&#9679; Disconnected</div>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">Live Joint Comparison</h2>
+      <div class="table-wrap">
+        <table id="joint-table">
+          <thead>
+            <tr>
+              <th>Joint Name</th>
+              <th id="th-cmd">joint_cmd (deg)</th>
+              <th id="th-actual">joint_states (deg)</th>
+              <th id="th-diff">Difference (deg)</th>
+            </tr>
+          </thead>
+          <tbody id="joint-table-body"></tbody>
+        </table>
+        <p id="table-placeholder" class="placeholder">Waiting for joint state data&hellip;</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">Statistics</h2>
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat"><span class="stat-title">Avg Diff</span><span class="stat-value" id="stat-avg">&mdash;</span></div>
+          <div class="divider"></div>
+          <div class="stat"><span class="stat-title">Max Diff</span><span class="stat-value" id="stat-max">&mdash;</span></div>
+          <div class="divider"></div>
+          <div class="stat"><span class="stat-title">Samples</span><span class="stat-value" id="stat-samples">0</span></div>
+        </div>
+        <button id="reset-stats-btn" class="btn btn-small">Reset Stats</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">Recording</h2>
+      <div class="record-row">
+        <button id="start-rec-btn" class="btn btn-start">&#9210; Start Recording</button>
+        <button id="stop-rec-btn" class="btn btn-stop" disabled>&#9209; Stop Recording</button>
+        <button id="clear-rec-btn" class="btn btn-small">&#10005; Clear</button>
+        <button id="save-csv-btn" class="btn btn-save">&#128190; Save CSV</button>
+        <span class="spacer"></span>
+        <span id="rec-duration" class="duration-label">Duration: 00:00 | Samples: 0</span>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

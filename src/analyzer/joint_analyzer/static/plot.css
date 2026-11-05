@@ -1,0 +1,135 @@
+.legend-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 5px;
+  padding: 3px 6px;
+  margin: -3px -6px;
+  cursor: pointer;
+}
+.legend-item:hover {
+  background: var(--panel-alt);
+}
+.legend-item input[type="checkbox"] {
+  accent-color: var(--accent);
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.legend-item .swatch {
+  width: 16px;
+  height: 2px;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+.legend-item.hidden {
+  opacity: 0.5;
+}
+.legend-item.hidden .swatch {
+  background: var(--muted) !important;
+}
+.legend-item .legend-label {
+  font-family: monospace;
+  color: var(--muted);
+}
+.legend-item .legend-value {
+  font-weight: 600;
+  color: var(--text);
+  min-width: 70px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.legend-item.waiting .legend-value {
+  color: var(--muted);
+  font-weight: normal;
+}
+
+.chart-wrap {
+  position: relative;
+}
+#chart {
+  width: 100%;
+  height: 420px;
+  display: block;
+  border-radius: 6px;
+  background: #181825;
+}
+.chart-tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background: var(--panel-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 11px;
+  color: var(--text);
+  white-space: nowrap;
+  transform: translate(-50%, -110%);
+}
+.chart-tooltip .tt-time {
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.chart-tooltip .tt-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.chart-tooltip .tt-row .swatch {
+  width: 10px;
+  height: 2px;
+  flex-shrink: 0;
+}
+.chart-tooltip .tt-row .tt-label {
+  font-family: monospace;
+  color: var(--muted);
+}
+.chart-tooltip .tt-row .tt-value {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  margin-left: auto;
+  padding-left: 10px;
+}
+
+.chart-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+table#value-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: #1e1e2e;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+table#value-table th, table#value-table td {
+  text-align: left;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+}
+table#value-table th {
+  color: var(--accent);
+  background: #181825;
+}
+table#value-table td.mono {
+  font-family: monospace;
+}
+table#value-table td.num {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}

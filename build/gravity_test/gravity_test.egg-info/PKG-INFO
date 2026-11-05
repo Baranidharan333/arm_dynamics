@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: gravity-test
+Version: 0.1.0
+Summary: Gravity compensation bring-up for the single-joint rig.
+Maintainer: baranidharan
+Maintainer-email: ihrphysicalai@gmail.com
+License: Apache-2.0

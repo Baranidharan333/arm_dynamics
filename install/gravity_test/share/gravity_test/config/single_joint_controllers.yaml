@@ -1,0 +1,20 @@
+
+# Controllers for the single-joint rig (single_joint_1kg.urdf, SingleJointSystem).
+#
+# single_joint_mit_controller is fed by the joint_cmd node: limited /joint_cmd position plus
+# the /gravity_torque feedforward from gravity_compensation's gravity_torque_node.
+
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    single_joint_mit_controller:
+      type: posveleff_controllers/PosVelEffController
+
+single_joint_mit_controller:
+  ros__parameters:
+    joints:
+      - joint1

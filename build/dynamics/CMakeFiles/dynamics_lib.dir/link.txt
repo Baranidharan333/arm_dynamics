@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdynamics_lib.a CMakeFiles/dynamics_lib.dir/src/robot_dynamics.cpp.o
+/usr/bin/ranlib libdynamics_lib.a
