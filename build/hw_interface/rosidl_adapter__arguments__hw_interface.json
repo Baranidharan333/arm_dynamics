@@ -1,8 +1,0 @@
-{
-  "package_name": "hw_interface",
-  "non_idl_tuples": [
-    "/home/baranidharan/gravity/src/hw_interface:msg/MotorStatus.msg",
-    "/home/baranidharan/gravity/src/hw_interface:msg/MotorStatusArray.msg",
-    "/home/baranidharan/gravity/src/hw_interface:srv/SetMotorGains.srv"
-  ]
-}

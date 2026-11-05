@@ -1,8 +1,0 @@
-source;share/gravity_compensation/hook/cmake_prefix_path.ps1
-source;share/gravity_compensation/hook/cmake_prefix_path.dsv
-source;share/gravity_compensation/hook/cmake_prefix_path.sh
-source;share/gravity_compensation/local_setup.bash
-source;share/gravity_compensation/local_setup.dsv
-source;share/gravity_compensation/local_setup.ps1
-source;share/gravity_compensation/local_setup.sh
-source;share/gravity_compensation/local_setup.zsh

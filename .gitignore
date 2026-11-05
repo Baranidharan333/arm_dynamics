@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# Keep .gitignore
+!.gitignore
+
+# Keep src directory and all its contents
+!src/
+!src/**

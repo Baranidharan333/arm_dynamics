@@ -1,7 +1,0 @@
-<library path="hw_interface_plugin">
-  <class
-    name="arm_hardware/ArmHardwareInterface"
-    type="arm_hardware::ArmHardwareInterface"
-    base_class_type="hardware_interface::SystemInterface">
-  </class>
-</library>

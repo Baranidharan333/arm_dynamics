@@ -1,6 +1,0 @@
-msg/MotorStatus.idl
-msg/MotorStatus.msg
-msg/MotorStatusArray.idl
-msg/MotorStatusArray.msg
-srv/SetMotorGains.idl
-srv/SetMotorGains.srv

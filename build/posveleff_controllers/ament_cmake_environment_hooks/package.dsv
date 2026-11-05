@@ -1,4 +1,0 @@
-source;share/posveleff_controllers/local_setup.bash
-source;share/posveleff_controllers/local_setup.dsv
-source;share/posveleff_controllers/local_setup.sh
-source;share/posveleff_controllers/local_setup.zsh

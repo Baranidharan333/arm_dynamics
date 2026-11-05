@@ -1,7 +1,0 @@
-Metadata-Version: 2.1
-Name: joint-analyzer
-Version: 0.0.1
-Summary: Web tool for comparing commanded vs actual joint positions, and a generic live topic-field plotter, over Flask.
-Maintainer: baranidharan
-Maintainer-email: selvambharani100@gmail.com
-License: Apache-2.0

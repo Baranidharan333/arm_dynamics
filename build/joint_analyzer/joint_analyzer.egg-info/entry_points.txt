@@ -1,6 +1,0 @@
-[console_scripts]
-check_diffs = joint_analyzer.check_diffs:main
-diagnose_qos = joint_analyzer.diagnose_qos:main
-plot_server = joint_analyzer.plot_server:main
-server = joint_analyzer.server:main
-verify_mapping = joint_analyzer.verify_mapping:main

@@ -1,4 +1,0 @@
-source;share/single_joint_description/local_setup.bash
-source;share/single_joint_description/local_setup.dsv
-source;share/single_joint_description/local_setup.sh
-source;share/single_joint_description/local_setup.zsh
