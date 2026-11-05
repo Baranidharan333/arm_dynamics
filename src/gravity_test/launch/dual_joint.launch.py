@@ -8,12 +8,13 @@ Command vs state per joint: run joint_analyzer separately
 
 Pipeline:
     /robot_description + /joint_states
-      + /joint_desired (limited targets p, v, a from joint1_cmd / joint2_cmd)
+      + /joint_desired (limited profile p, v, a from the two controllers)
       -> gravity_compensation_node (dynamics, KDL)
       -> /feedforward_torque = M(q_d) ddq_d + C(q_d, dq_d) dq_d + G(q) (joint1, joint2)
     joint_cmd GUI (joint_state_publisher_gui -> /joint_cmd, one slider per joint)
-      -> joint1_cmd / joint2_cmd (joint_cmd nodes: rate limit + /feedforward_torque)
-      -> joint1_mit_controller / joint2_mit_controller (posveleff_controllers/PosVelEffController)
+      -> joint1_cmd / joint2_cmd (joint_cmd nodes: target + /feedforward_torque)
+      -> joint1_mit_controller / joint2_mit_controller (posveleff_controllers/PosVelEffController:
+         velocity/acceleration limited profile, publishes it on /joint_desired)
       -> DualJointSystem (hw_interface ArmHardwareInterface, MIT mode, motor IDs 1 and 2)
 
 Start with both arms hanging straight down: hw_interface has no zero offset, so both motors'
@@ -103,8 +104,16 @@ def launch_setup(context):
         Node(
             package="controller_manager",
             executable="spawner",
-            arguments=["joint_state_broadcaster", "joint1_mit_controller",
-                       "joint2_mit_controller", "--controller-manager", "/controller_manager"],
+            arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
+        ),
+        # Velocity/acceleration limits: posveleff_controllers/config/posveleff_controller.yaml
+        Node(
+            package="controller_manager",
+            executable="spawner",
+            arguments=["joint1_mit_controller", "joint2_mit_controller",
+                       "--controller-manager", "/controller_manager", "--param-file",
+                       os.path.join(get_package_share_directory("posveleff_controllers"), "config",
+                         "posveleff_controller.yaml")],
         ),
         Node(
             package="dynamics",

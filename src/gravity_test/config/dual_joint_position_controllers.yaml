@@ -22,8 +22,22 @@ joint1_position_controller:
   ros__parameters:
     joints:
       - joint1
+    # Limits of the controller's position profile (POS_VEL launch does not load
+    # posveleff_controllers/config/posveleff_controller.yaml). Keep max_velocity below
+    # position_cmd's speed_limit so the motor keeps up.
+    max_velocity: [1.0]        # rad/s
+    max_acceleration: [2.0]    # rad/s^2
+    # POS_VEL: pass position_cmd's speed limit through instead of the profile velocity.
+    send_profile_velocity: false
 
 joint2_position_controller:
   ros__parameters:
     joints:
       - joint2
+    # Limits of the controller's position profile (POS_VEL launch does not load
+    # posveleff_controllers/config/posveleff_controller.yaml). Keep max_velocity below
+    # position_cmd's speed_limit so the motor keeps up.
+    max_velocity: [1.0]        # rad/s
+    max_acceleration: [2.0]    # rad/s^2
+    # POS_VEL: pass position_cmd's speed limit through instead of the profile velocity.
+    send_profile_velocity: false

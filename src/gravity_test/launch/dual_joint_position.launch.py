@@ -11,8 +11,9 @@ the ros2_control block runs both motors in 'posvel' instead of 'mit'):
 
 Pipeline:
     joint_cmd GUI (joint_state_publisher_gui -> /joint_cmd, one slider per joint)
-      -> joint1_cmd / joint2_cmd (position_cmd nodes: rate limited target + speed limit)
-      -> joint1_position_controller / joint2_position_controller (PosVelEffController)
+      -> joint1_cmd / joint2_cmd (position_cmd nodes: target + speed limit)
+      -> joint1_position_controller / joint2_position_controller (PosVelEffController:
+         velocity/acceleration limited profile, speed limit passed through)
       -> DualJointSystem (hw_interface ArmHardwareInterface, POS_VEL mode, motor IDs 1 and 2)
 
 Command vs state per joint: run joint_analyzer separately
@@ -64,7 +65,6 @@ def launch_setup(context):
     description = {"robot_description": robot_description(context)}
     pkg = get_package_share_directory("gravity_test")
     controllers = os.path.join(pkg, "config", "dual_joint_position_controllers.yaml")
-    max_velocity = float(LaunchConfiguration("max_velocity").perform(context))
     speed_limit = float(LaunchConfiguration("speed_limit").perform(context))
 
     joint_cmd_nodes = [
@@ -77,7 +77,6 @@ def launch_setup(context):
                 "joint_name": joint,
                 "controller_topic": f"/{joint}_position_controller/joint_trajectory",
                 "direction": cfg["direction"],
-                "max_velocity": max_velocity,
                 "speed_limit": speed_limit,
             }],
         )
@@ -135,12 +134,10 @@ def generate_launch_description():
                                           "motors."),
         DeclareLaunchArgument("mock_initial_position", default_value="0.0",
                               description="Mock position of both joints at start [rad]."),
-        DeclareLaunchArgument("max_velocity", default_value="1.0",
-                              description="joint_cmd ramp speed of the target [rad/s]."),
         DeclareLaunchArgument("speed_limit", default_value="2.0",
                               description="POS_VEL speed limit sent to the motors [rad/s]; "
-                                          "keep it above max_velocity so the motor keeps up "
-                                          "with the ramp."),
+                                          "keep it above the controllers' max_velocity "
+                                          "(dual_joint_position_controllers.yaml)."),
         DeclareLaunchArgument("gui", default_value="true",
                               description="Start the joint_cmd slider GUI."),
         DeclareLaunchArgument("rviz", default_value="true", description="Start RViz."),

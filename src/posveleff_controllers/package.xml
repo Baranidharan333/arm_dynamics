@@ -3,7 +3,10 @@
 <package format="3">
   <name>posveleff_controllers</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>
+    PosVelEffController: position / velocity / effort controller for MIT and POS_VEL motors,
+    with velocity and acceleration limiting of the position target.
+  </description>
   <maintainer email="selvambharani100@gmail.com">baranidharan</maintainer>
   <license>TODO: License declaration</license>
 
@@ -17,6 +20,13 @@
   <depend>trajectory_msgs</depend>
   <depend>rclcpp_lifecycle</depend>
 
+  <!-- scripts/home_move_service.py -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_srvs</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>gen2_msgs</exec_depend>
+
+  <test_depend>ament_cmake_gtest</test_depend>
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 

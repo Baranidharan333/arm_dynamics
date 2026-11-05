@@ -12,6 +12,7 @@ find_package(pluginlib REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(trajectory_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 find_package(rclcpp_lifecycle REQUIRED)
 
 
@@ -33,6 +34,7 @@ ament_target_dependencies(
   pluginlib
   rclcpp
   rclcpp_lifecycle
+  sensor_msgs
   trajectory_msgs
 )
 
@@ -55,11 +57,26 @@ install(
   FILES controller_plugins.xml
   DESTINATION share/${PROJECT_NAME}
 )
+install(
+  DIRECTORY config
+  DESTINATION share/${PROJECT_NAME}
+)
+# /move_home and /set_home_position services (ros2 run posveleff_controllers home_move_service.py)
+install(
+  PROGRAMS scripts/home_move_service.py
+  DESTINATION lib/${PROJECT_NAME}
+)
 ament_export_include_directories(include)
 
 ament_export_dependencies(
   controller_interface
   pluginlib
 )
+
+if(BUILD_TESTING)
+  find_package(ament_cmake_gtest REQUIRED)
+  ament_add_gtest(test_motion_limiter test/test_motion_limiter.cpp)
+  target_include_directories(test_motion_limiter PRIVATE include)
+endif()
 
 ament_package()

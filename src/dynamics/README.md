@@ -8,7 +8,7 @@ Robot dynamics computed with KDL from the URDF. The package has a single node,
 ```
 /robot_description (std_msgs/String, latched)         URDF the KDL models are built from
 /joint_states      (sensor_msgs/JointState)           measured q
-/joint_desired     (trajectory_msgs/JointTrajectory)  desired q_d, dq_d, ddq_d (from joint_cmd)
+/joint_desired     (trajectory_msgs/JointTrajectory)  desired q_d, dq_d, ddq_d (PosVelEffController profile)
 -> /feedforward_torque (sensor_msgs/JointState)       effort = tau_ff
 -> /gravity_torque     (sensor_msgs/JointState)       effort = G(q) term only (for debugging)
 ```

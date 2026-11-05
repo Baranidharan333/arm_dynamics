@@ -18,3 +18,5 @@ single_joint_mit_controller:
   ros__parameters:
     joints:
       - joint1
+
+# max_velocity / max_acceleration: posveleff_controllers/config/posveleff_controller.yaml

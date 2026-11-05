@@ -1,0 +1,27 @@
+# PosVelEffController tuning. Loaded by the MIT launch files with
+#   spawner <controllers...> --param-file <this file>
+# It is applied after the controller_manager's controllers yaml, so values here win.
+#
+# '/**' applies to every controller spawned with this file. To give one controller its own
+# values, add a section with its name AFTER the '/**' one, e.g.
+#   joint1_mit_controller:
+#     ros__parameters:
+#       max_velocity: [2.0]
+#
+# Rebuild posveleff_controllers after editing (or build with --symlink-install).
+/**:
+  ros__parameters:
+    # Velocity / acceleration limits of the position profile. One value for all joints of a
+    # controller, or one per joint in its 'joints' order. Changeable at runtime, e.g.
+    #   ros2 param set /joint1_mit_controller max_velocity "[2.0]"
+    max_velocity: [3.0]        # rad/s
+    max_acceleration: [6.0]    # rad/s^2
+
+    # Profile p, v, a for the dynamics feedforward (gravity_compensation_node subscribes).
+    desired_topic: /joint_desired
+    # Profile p, v and the effort sent, for joint_analyzer.
+    command_debug_topic: /jnt_cmt_to_ctrl
+
+    # send_profile_velocity is per mode, so it is set in the rig's controllers yaml, not here:
+    #   true  (default) MIT: the profile velocity is sent
+    #   false POS_VEL: the incoming velocity (motor speed limit) is passed through

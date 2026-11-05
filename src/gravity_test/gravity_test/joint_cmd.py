@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""Joint command limiter with model-based torque feedforward.
+"""Joint target + model torque feedforward for a PosVelEffController (MIT mode), one joint.
 
-Same job as gen2's dual-arm joint_cmd.py, for one joint:
   - /joint_cmd (sensor_msgs/JointState) sets the target position and optional effort,
-  - the target is velocity/acceleration limited at publish_rate,
-  - the result is sent as one JointTrajectory point (p, v, effort) to a
-    posveleff_controllers/PosVelEffController, which hands it to hw_interface.
+  - /feedforward_torque (dynamics' gravity_compensation_node) gives tau_ff,
+  - at publish_rate one JointTrajectory point (target position, effort) is sent to the
+    posveleff_controllers/PosVelEffController.
 
-The limited target (p, v, a) is also published on /joint_desired. dynamics'
-gravity_compensation_node turns it into the feedforward torque
-    tau_ff = M(q_d) ddq_d + C(q_d, dq_d) dq_d + G(q)
-on /feedforward_torque (URDF convention), and the effort sent is
+Velocity/acceleration limiting is done in the controller: it turns the target into a
+limited profile (p, v, a), sends p, v to the motor and publishes the profile on
+/joint_desired, from which gravity_compensation_node computes
+    tau_ff = M(q_d) ddq_d + C(q_d, dq_d) dq_d + G(q).
+The effort sent here is
     effort_sign * (target_effort + tau_ff)
 effort_sign must equal the joint's hw_interface 'direction': ArmHardwareInterface flips
 position/velocity by it but sends effort unflipped.
@@ -33,17 +33,15 @@ from sensor_msgs.msg import JointState
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 
 
-class JointCommandLimiter(Node):
+class JointCommand(Node):
 
     def __init__(self):
-        super().__init__("joint_command_limiter")
+        super().__init__("joint_command")
 
         # -------- Parameters --------
         self.declare_parameter("joint_name", "joint1")
         self.declare_parameter("controller_topic",
                                "/single_joint_mit_controller/joint_trajectory")
-        self.declare_parameter("max_velocity", 3.0)       # rad/s
-        self.declare_parameter("max_acceleration", 6.0)   # rad/s^2
         self.declare_parameter("publish_rate", 200.0)     # Hz
 
         # Model feedforward from /feedforward_torque
@@ -54,8 +52,6 @@ class JointCommandLimiter(Node):
         self.declare_parameter("max_effort", 4.0)         # |effort| clamp [Nm]
 
         self.joint_name = self.get_parameter("joint_name").value
-        self.max_vel = self.get_parameter("max_velocity").value
-        self.max_acc = self.get_parameter("max_acceleration").value
         self.rate = self.get_parameter("publish_rate").value
         self.ff_enabled = self.get_parameter("feedforward_enabled").value
         self.ff_timeout = self.get_parameter("feedforward_timeout").value
@@ -71,14 +67,10 @@ class JointCommandLimiter(Node):
         # -------- State --------
         self.target_pos = 0.0
         self.target_effort = 0.0
-        self.current_pos = 0.0
-        self.current_vel = 0.0
-        self.current_acc = 0.0
         self.ff_effort = 0.0
         self._ff_stamp = None
         self._ff_stale = True
         self.initialized = False
-        self._last_update_time = None
 
         # -------- ROS --------
         self.create_subscription(
@@ -102,13 +94,7 @@ class JointCommandLimiter(Node):
         self.pub = self.create_publisher(
             JointTrajectory, self.get_parameter("controller_topic").value, 10)
 
-        # Limited target (p, v, a) in URDF convention, for the feedforward model.
-        self.desired_pub = self.create_publisher(JointTrajectory, "/joint_desired", 10)
-
-        # URDF-convention debug view: limited target, and the feedforward torque used in effort.
-        self.debug_pub = self.create_publisher(JointState, "/jnt_cmt_to_ctrl", 10)
-
-        self.timer = self.create_timer(self.dt, self.update)
+        self.timer = self.create_timer(self.dt, self.publish)
 
         self.get_logger().info(
             f"Commanding {self.joint_name} on {self.get_parameter('controller_topic').value}, "
@@ -118,11 +104,7 @@ class JointCommandLimiter(Node):
 
         for p in params:
 
-            if p.name == "max_velocity":
-                self.max_vel = p.value
-            elif p.name == "max_acceleration":
-                self.max_acc = p.value
-            elif p.name == "feedforward_enabled":
+            if p.name == "feedforward_enabled":
                 self.ff_enabled = p.value
             elif p.name == "feedforward_timeout":
                 self.ff_timeout = p.value
@@ -138,14 +120,13 @@ class JointCommandLimiter(Node):
 
     def joint_state_callback(self, msg):
 
-        # Start from where the joint actually is.
+        # Until the first /joint_cmd, hold where the joint actually is.
         if self.initialized or self.joint_name not in msg.name:
             return
         i = msg.name.index(self.joint_name)
         if i >= len(msg.position) or not math.isfinite(msg.position[i]):
             return
 
-        self.current_pos = msg.position[i]
         self.target_pos = msg.position[i]
         self.initialized = True
 
@@ -155,9 +136,9 @@ class JointCommandLimiter(Node):
             return
         i = msg.name.index(self.joint_name)
 
-        if i < len(msg.position):
+        if i < len(msg.position) and math.isfinite(msg.position[i]):
             self.target_pos = msg.position[i]
-        if i < len(msg.effort):
+        if i < len(msg.effort) and math.isfinite(msg.effort[i]):
             self.target_effort = msg.effort[i]
 
     def ff_effort_callback(self, msg):
@@ -170,44 +151,6 @@ class JointCommandLimiter(Node):
 
         self.ff_effort = msg.effort[i]
         self._ff_stamp = self.get_clock().now()
-
-    def update(self):
-
-        if not self.initialized:
-            return
-
-        # Integrate over the real elapsed time, not an assumed self.dt.
-        now = self.get_clock().now()
-        if self._last_update_time is None:
-            self._last_update_time = now
-            return
-        dt = (now - self._last_update_time).nanoseconds * 1e-9
-        self._last_update_time = now
-        if dt <= 0.0:
-            return
-        dt = min(dt, 2.0 * self.dt)
-
-        error = self.target_pos - self.current_pos
-
-        # Cap speed so the joint can still brake to zero at the target (v^2 = 2*a*d).
-        desired_vel = math.copysign(
-            min(self.max_vel, math.sqrt(2 * self.max_acc * abs(error))), error)
-
-        max_dv = self.max_acc * dt
-        dv = max(-max_dv, min(max_dv, desired_vel - self.current_vel))
-        self.current_vel += dv
-        self.current_acc = dv / dt
-
-        # Snap onto the target once it is reachable within this step. The last bit of speed
-        # (<= max_dv) is dropped here; no acceleration is reported for it.
-        if abs(error) <= abs(self.current_vel) * dt and abs(self.current_vel) <= max_dv:
-            self.current_pos = self.target_pos
-            self.current_vel = 0.0
-            self.current_acc = 0.0
-        else:
-            self.current_pos += self.current_vel * dt
-
-        self.publish(now)
 
     def feedforward(self, now):
 
@@ -226,44 +169,28 @@ class JointCommandLimiter(Node):
                 self.get_logger().info("Receiving /feedforward_torque")
         return 0.0 if stale else self.ff_effort
 
-    def publish(self, now):
+    def publish(self):
 
-        ff = self.feedforward(now)
+        if not self.initialized:
+            return
+
+        ff = self.feedforward(self.get_clock().now())
         effort = max(-self.max_effort, min(self.max_effort, self.target_effort + ff))
 
         traj = JointTrajectory()
         traj.joint_names = [self.joint_name]
         p = JointTrajectoryPoint()
-        p.positions = [self.current_pos]
-        p.velocities = [self.current_vel]
+        p.positions = [self.target_pos]
         p.effort = [self.effort_sign * effort]
         p.time_from_start = Duration(sec=0, nanosec=int(self.dt * 1e9))
         traj.points.append(p)
         self.pub.publish(traj)
 
-        desired = JointTrajectory()
-        desired.header.stamp = now.to_msg()
-        desired.joint_names = [self.joint_name]
-        d = JointTrajectoryPoint()
-        d.positions = [self.current_pos]
-        d.velocities = [self.current_vel]
-        d.accelerations = [self.current_acc]
-        desired.points.append(d)
-        self.desired_pub.publish(desired)
-
-        debug = JointState()
-        debug.header.stamp = now.to_msg()
-        debug.name = [self.joint_name]
-        debug.position = [self.current_pos]
-        debug.velocity = [self.current_vel]
-        debug.effort = [ff]
-        self.debug_pub.publish(debug)
-
 
 def main(args=None):
 
     rclpy.init(args=args)
-    node = JointCommandLimiter()
+    node = JointCommand()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:

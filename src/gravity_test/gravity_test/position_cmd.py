@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
-"""Joint command limiter for position control (hw_interface 'posvel' = DM POS_VEL mode).
+"""Joint target for position control (hw_interface 'posvel' = DM POS_VEL mode), one joint.
 
-Position-mode counterpart of joint_cmd.py (which is for MIT mode), for one joint:
+Position-mode counterpart of joint_cmd.py (which is for MIT mode):
   - /joint_cmd (sensor_msgs/JointState) sets the target position,
-  - the target is velocity/acceleration limited at publish_rate,
-  - the result is sent as one JointTrajectory point to a
-    posveleff_controllers/PosVelEffController, which hands it to hw_interface.
+  - at publish_rate one JointTrajectory point (target, speed limit) is sent to a
+    posveleff_controllers/PosVelEffController, which limits the target's velocity and
+    acceleration and hands the profile position to hw_interface.
 
 In POS_VEL the motor's own position loop tracks the position, and the velocity field is its
-SPEED LIMIT for the move, not a feedforward. So instead of the ramp velocity (0 at rest, which
-could leave the motor short of the target) a constant positive speed_limit is sent. There is
-no torque input in POS_VEL, so no gravity feedforward and effort is 0.
+SPEED LIMIT for the move, not a feedforward. So the controller runs with
+send_profile_velocity: false and forwards this constant positive speed_limit instead of the
+profile velocity (0 at rest, which could leave the motor short of the target). There is
+no torque input in POS_VEL, so no feedforward and effort is 0.
 
 hw_interface multiplies the velocity by the joint's 'direction', so 'direction' here must equal
 that hw parameter; the speed limit is pre-multiplied by it to reach the motor positive.
@@ -33,26 +34,22 @@ from sensor_msgs.msg import JointState
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 
 
-class PositionCommandLimiter(Node):
+class PositionCommand(Node):
 
     def __init__(self):
-        super().__init__("position_command_limiter")
+        super().__init__("position_command")
 
         # -------- Parameters --------
         self.declare_parameter("joint_name", "joint1")
         self.declare_parameter("controller_topic",
                                "/joint1_position_controller/joint_trajectory")
-        self.declare_parameter("max_velocity", 1.0)       # target ramp speed [rad/s]
-        self.declare_parameter("max_acceleration", 2.0)   # target ramp accel [rad/s^2]
         self.declare_parameter("publish_rate", 200.0)     # Hz
-        # POS_VEL speed limit sent to the motor [rad/s]. Keep it above max_velocity so the
-        # motor keeps up with the ramp.
+        # POS_VEL speed limit sent to the motor [rad/s]. Keep it above the controller's
+        # max_velocity so the motor keeps up with the profile.
         self.declare_parameter("speed_limit", 2.0)
         self.declare_parameter("direction", -1.0)         # must equal hw_interface 'direction'
 
         self.joint_name = self.get_parameter("joint_name").value
-        self.max_vel = self.get_parameter("max_velocity").value
-        self.max_acc = self.get_parameter("max_acceleration").value
         self.rate = self.get_parameter("publish_rate").value
         self.speed_limit = self.get_parameter("speed_limit").value
         self.direction = self.get_parameter("direction").value
@@ -67,10 +64,7 @@ class PositionCommandLimiter(Node):
 
         # -------- State --------
         self.target_pos = 0.0
-        self.current_pos = 0.0
-        self.current_vel = 0.0
         self.initialized = False
-        self._last_update_time = None
 
         # -------- ROS --------
         self.create_subscription(
@@ -91,11 +85,7 @@ class PositionCommandLimiter(Node):
         self.pub = self.create_publisher(
             JointTrajectory, self.get_parameter("controller_topic").value, 10)
 
-        # URDF-convention debug view of the limited target (same topic as joint_cmd.py, so
-        # joint_analyzer compares /jnt_cmt_to_ctrl against /joint_states the same way).
-        self.debug_pub = self.create_publisher(JointState, "/jnt_cmt_to_ctrl", 10)
-
-        self.timer = self.create_timer(self.dt, self.update)
+        self.timer = self.create_timer(self.dt, self.publish)
 
         self.get_logger().info(
             f"Commanding {self.joint_name} on {self.get_parameter('controller_topic').value} "
@@ -105,11 +95,7 @@ class PositionCommandLimiter(Node):
 
         for p in params:
 
-            if p.name == "max_velocity":
-                self.max_vel = p.value
-            elif p.name == "max_acceleration":
-                self.max_acc = p.value
-            elif p.name == "speed_limit":
+            if p.name == "speed_limit":
                 if not p.value > 0.0:
                     return SetParametersResult(
                         successful=False, reason="speed_limit must be > 0")
@@ -124,14 +110,13 @@ class PositionCommandLimiter(Node):
 
     def joint_state_callback(self, msg):
 
-        # Start from where the joint actually is.
+        # Until the first /joint_cmd, hold where the joint actually is.
         if self.initialized or self.joint_name not in msg.name:
             return
         i = msg.name.index(self.joint_name)
         if i >= len(msg.position) or not math.isfinite(msg.position[i]):
             return
 
-        self.current_pos = msg.position[i]
         self.target_pos = msg.position[i]
         self.initialized = True
 
@@ -144,46 +129,15 @@ class PositionCommandLimiter(Node):
         if i < len(msg.position) and math.isfinite(msg.position[i]):
             self.target_pos = msg.position[i]
 
-    def update(self):
+    def publish(self):
 
         if not self.initialized:
             return
 
-        # Integrate over the real elapsed time, not an assumed self.dt.
-        now = self.get_clock().now()
-        if self._last_update_time is None:
-            self._last_update_time = now
-            return
-        dt = (now - self._last_update_time).nanoseconds * 1e-9
-        self._last_update_time = now
-        if dt <= 0.0:
-            return
-        dt = min(dt, 2.0 * self.dt)
-
-        error = self.target_pos - self.current_pos
-
-        # Cap speed so the target can still brake to zero at the goal (v^2 = 2*a*d).
-        desired_vel = math.copysign(
-            min(self.max_vel, math.sqrt(2 * self.max_acc * abs(error))), error)
-
-        max_dv = self.max_acc * dt
-        self.current_vel += max(-max_dv, min(max_dv, desired_vel - self.current_vel))
-
-        # Snap onto the target once it is reachable within this step.
-        if abs(error) <= abs(self.current_vel) * dt and abs(self.current_vel) <= max_dv:
-            self.current_pos = self.target_pos
-            self.current_vel = 0.0
-        else:
-            self.current_pos += self.current_vel * dt
-
-        self.publish(now)
-
-    def publish(self, now):
-
         traj = JointTrajectory()
         traj.joint_names = [self.joint_name]
         p = JointTrajectoryPoint()
-        p.positions = [self.current_pos]
+        p.positions = [self.target_pos]
         # hw_interface multiplies velocity by 'direction'; pre-multiply so the motor gets a
         # positive speed limit.
         p.velocities = [self.direction * self.speed_limit]
@@ -192,19 +146,11 @@ class PositionCommandLimiter(Node):
         traj.points.append(p)
         self.pub.publish(traj)
 
-        debug = JointState()
-        debug.header.stamp = now.to_msg()
-        debug.name = [self.joint_name]
-        debug.position = [self.current_pos]
-        debug.velocity = [self.current_vel]
-        debug.effort = [0.0]
-        self.debug_pub.publish(debug)
-
 
 def main(args=None):
 
     rclpy.init(args=args)
-    node = PositionCommandLimiter()
+    node = PositionCommand()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:

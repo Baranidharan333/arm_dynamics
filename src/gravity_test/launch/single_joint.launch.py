@@ -5,12 +5,13 @@
 
 Pipeline:
     /robot_description + /joint_states
-      + /joint_desired (limited target p, v, a from joint_cmd)
+      + /joint_desired (limited profile p, v, a from the controller)
       -> gravity_compensation_node (dynamics, KDL)
       -> /feedforward_torque = M(q_d) ddq_d + C(q_d, dq_d) dq_d + G(q)
     joint_cmd GUI (joint_state_publisher_gui -> /joint_cmd)
-      -> joint_cmd node (rate limit + /feedforward_torque)
-      -> single_joint_mit_controller (posveleff_controllers/PosVelEffController)
+      -> joint_cmd node (target + /feedforward_torque)
+      -> single_joint_mit_controller (posveleff_controllers/PosVelEffController:
+         velocity/acceleration limited profile, publishes it on /joint_desired)
       -> SingleJointSystem (hw_interface ArmHardwareInterface, MIT mode)
 
 Start with the arm hanging straight down: hw_interface has no zero offset, so the motor's
@@ -74,8 +75,16 @@ def launch_setup(context):
         Node(
             package="controller_manager",
             executable="spawner",
-            arguments=["joint_state_broadcaster", "single_joint_mit_controller",
-                       "--controller-manager", "/controller_manager"],
+            arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
+        ),
+        # Velocity/acceleration limits: posveleff_controllers/config/posveleff_controller.yaml
+        Node(
+            package="controller_manager",
+            executable="spawner",
+            arguments=["single_joint_mit_controller", "--controller-manager",
+                       "/controller_manager", "--param-file",
+                       os.path.join(get_package_share_directory("posveleff_controllers"), "config",
+                         "posveleff_controller.yaml")],
         ),
         Node(
             package="dynamics",

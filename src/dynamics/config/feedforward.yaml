@@ -13,7 +13,7 @@ gravity_compensation_node:
     # Start-up ramp: at launch the arm is at rest, so tau_ff fades in smoothly from 0 to full
     # over this many seconds instead of being applied all at once. Runs once, from the first
     # torque published. 0 = off.
-    ramp_duration: 1.0
+    ramp_duration: 10.0
 
     # Overall factor on the whole tau_ff (1.0 = 100% of the model).
     feedforward_scale: 0.85
