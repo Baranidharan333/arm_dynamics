@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Joint command limiter with gravity feedforward for the single-joint rig.
+"""Joint command limiter with model-based torque feedforward.
 
 Same job as gen2's dual-arm joint_cmd.py, for one joint:
   - /joint_cmd (sensor_msgs/JointState) sets the target position and optional effort,
@@ -7,10 +7,11 @@ Same job as gen2's dual-arm joint_cmd.py, for one joint:
   - the result is sent as one JointTrajectory point (p, v, effort) to a
     posveleff_controllers/PosVelEffController, which hands it to hw_interface.
 
-The effort sent is
-    effort_sign * (target_effort + gravity_torque)
-where gravity_torque comes from gravity_compensation's gravity_torque_node on /gravity_torque
-(URDF convention, computed from /robot_description at the measured position).
+The limited target (p, v, a) is also published on /joint_desired. dynamics'
+gravity_compensation_node turns it into the feedforward torque
+    tau_ff = M(q_d) ddq_d + C(q_d, dq_d) dq_d + G(q)
+on /feedforward_torque (URDF convention), and the effort sent is
+    effort_sign * (target_effort + tau_ff)
 effort_sign must equal the joint's hw_interface 'direction': ArmHardwareInterface flips
 position/velocity by it but sends effort unflipped.
 """
@@ -41,14 +42,14 @@ class JointCommandLimiter(Node):
         self.declare_parameter("joint_name", "joint1")
         self.declare_parameter("controller_topic",
                                "/single_joint_mit_controller/joint_trajectory")
-        self.declare_parameter("max_velocity", 1.0)       # rad/s
-        self.declare_parameter("max_acceleration", 2.0)   # rad/s^2
+        self.declare_parameter("max_velocity", 3.0)       # rad/s
+        self.declare_parameter("max_acceleration", 6.0)   # rad/s^2
         self.declare_parameter("publish_rate", 200.0)     # Hz
 
-        # Gravity feedforward from /gravity_torque
-        self.declare_parameter("gravity_enabled", True)
-        # Older than this, the gravity torque is dropped: it was computed for another pose.
-        self.declare_parameter("gravity_timeout", 0.1)    # s
+        # Model feedforward from /feedforward_torque
+        self.declare_parameter("feedforward_enabled", True)
+        # Older than this, the feedforward torque is dropped: it was computed for another pose.
+        self.declare_parameter("feedforward_timeout", 0.1)    # s
         self.declare_parameter("effort_sign", -1.0)
         self.declare_parameter("max_effort", 4.0)         # |effort| clamp [Nm]
 
@@ -56,8 +57,8 @@ class JointCommandLimiter(Node):
         self.max_vel = self.get_parameter("max_velocity").value
         self.max_acc = self.get_parameter("max_acceleration").value
         self.rate = self.get_parameter("publish_rate").value
-        self.gravity_enabled = self.get_parameter("gravity_enabled").value
-        self.gravity_timeout = self.get_parameter("gravity_timeout").value
+        self.ff_enabled = self.get_parameter("feedforward_enabled").value
+        self.ff_timeout = self.get_parameter("feedforward_timeout").value
         self.effort_sign = self.get_parameter("effort_sign").value
         self.max_effort = self.get_parameter("max_effort").value
         self.dt = 1.0 / self.rate
@@ -72,9 +73,10 @@ class JointCommandLimiter(Node):
         self.target_effort = 0.0
         self.current_pos = 0.0
         self.current_vel = 0.0
-        self.gravity_effort = 0.0
-        self._gravity_stamp = None
-        self._gravity_stale = True
+        self.current_acc = 0.0
+        self.ff_effort = 0.0
+        self._ff_stamp = None
+        self._ff_stale = True
         self.initialized = False
         self._last_update_time = None
 
@@ -95,19 +97,22 @@ class JointCommandLimiter(Node):
             ))
 
         self.create_subscription(
-            JointState, "/gravity_torque", self.gravity_effort_callback, 10)
+            JointState, "/feedforward_torque", self.ff_effort_callback, 10)
 
         self.pub = self.create_publisher(
             JointTrajectory, self.get_parameter("controller_topic").value, 10)
 
-        # URDF-convention debug view: limited target, and the gravity torque used in effort.
+        # Limited target (p, v, a) in URDF convention, for the feedforward model.
+        self.desired_pub = self.create_publisher(JointTrajectory, "/joint_desired", 10)
+
+        # URDF-convention debug view: limited target, and the feedforward torque used in effort.
         self.debug_pub = self.create_publisher(JointState, "/jnt_cmt_to_ctrl", 10)
 
         self.timer = self.create_timer(self.dt, self.update)
 
         self.get_logger().info(
             f"Commanding {self.joint_name} on {self.get_parameter('controller_topic').value}, "
-            f"gravity from /gravity_torque {'on' if self.gravity_enabled else 'off'}")
+            f"feedforward from /feedforward_torque {'on' if self.ff_enabled else 'off'}")
 
     def dynamic_parameter_cb(self, params):
 
@@ -117,10 +122,10 @@ class JointCommandLimiter(Node):
                 self.max_vel = p.value
             elif p.name == "max_acceleration":
                 self.max_acc = p.value
-            elif p.name == "gravity_enabled":
-                self.gravity_enabled = p.value
-            elif p.name == "gravity_timeout":
-                self.gravity_timeout = p.value
+            elif p.name == "feedforward_enabled":
+                self.ff_enabled = p.value
+            elif p.name == "feedforward_timeout":
+                self.ff_timeout = p.value
             elif p.name == "max_effort":
                 self.max_effort = p.value
             elif p.name in ("joint_name", "controller_topic", "publish_rate", "effort_sign"):
@@ -155,7 +160,7 @@ class JointCommandLimiter(Node):
         if i < len(msg.effort):
             self.target_effort = msg.effort[i]
 
-    def gravity_effort_callback(self, msg):
+    def ff_effort_callback(self, msg):
 
         if self.joint_name not in msg.name:
             return
@@ -163,8 +168,8 @@ class JointCommandLimiter(Node):
         if i >= len(msg.effort) or not math.isfinite(msg.effort[i]):
             return
 
-        self.gravity_effort = msg.effort[i]
-        self._gravity_stamp = self.get_clock().now()
+        self.ff_effort = msg.effort[i]
+        self._ff_stamp = self.get_clock().now()
 
     def update(self):
 
@@ -189,38 +194,42 @@ class JointCommandLimiter(Node):
             min(self.max_vel, math.sqrt(2 * self.max_acc * abs(error))), error)
 
         max_dv = self.max_acc * dt
-        self.current_vel += max(-max_dv, min(max_dv, desired_vel - self.current_vel))
+        dv = max(-max_dv, min(max_dv, desired_vel - self.current_vel))
+        self.current_vel += dv
+        self.current_acc = dv / dt
 
-        # Snap onto the target once it is reachable within this step.
+        # Snap onto the target once it is reachable within this step. The last bit of speed
+        # (<= max_dv) is dropped here; no acceleration is reported for it.
         if abs(error) <= abs(self.current_vel) * dt and abs(self.current_vel) <= max_dv:
             self.current_pos = self.target_pos
             self.current_vel = 0.0
+            self.current_acc = 0.0
         else:
             self.current_pos += self.current_vel * dt
 
         self.publish(now)
 
-    def gravity(self, now):
+    def feedforward(self, now):
 
-        if not self.gravity_enabled:
+        if not self.ff_enabled:
             return 0.0
 
-        stale = self._gravity_stamp is None or \
-            (now - self._gravity_stamp).nanoseconds * 1e-9 > self.gravity_timeout
-        if stale != self._gravity_stale:
-            self._gravity_stale = stale
+        stale = self._ff_stamp is None or \
+            (now - self._ff_stamp).nanoseconds * 1e-9 > self.ff_timeout
+        if stale != self._ff_stale:
+            self._ff_stale = stale
             if stale:
                 self.get_logger().warn(
-                    f"No /gravity_torque for {self.joint_name} in {self.gravity_timeout}s; "
-                    "sending no gravity torque")
+                    f"No /feedforward_torque for {self.joint_name} in {self.ff_timeout}s; "
+                    "sending no feedforward torque")
             else:
-                self.get_logger().info("Receiving /gravity_torque")
-        return 0.0 if stale else self.gravity_effort
+                self.get_logger().info("Receiving /feedforward_torque")
+        return 0.0 if stale else self.ff_effort
 
     def publish(self, now):
 
-        gravity = self.gravity(now)
-        effort = max(-self.max_effort, min(self.max_effort, self.target_effort + gravity))
+        ff = self.feedforward(now)
+        effort = max(-self.max_effort, min(self.max_effort, self.target_effort + ff))
 
         traj = JointTrajectory()
         traj.joint_names = [self.joint_name]
@@ -232,12 +241,22 @@ class JointCommandLimiter(Node):
         traj.points.append(p)
         self.pub.publish(traj)
 
+        desired = JointTrajectory()
+        desired.header.stamp = now.to_msg()
+        desired.joint_names = [self.joint_name]
+        d = JointTrajectoryPoint()
+        d.positions = [self.current_pos]
+        d.velocities = [self.current_vel]
+        d.accelerations = [self.current_acc]
+        desired.points.append(d)
+        self.desired_pub.publish(desired)
+
         debug = JointState()
         debug.header.stamp = now.to_msg()
         debug.name = [self.joint_name]
         debug.position = [self.current_pos]
         debug.velocity = [self.current_vel]
-        debug.effort = [gravity]
+        debug.effort = [ff]
         self.debug_pub.publish(debug)
 
 

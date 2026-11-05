@@ -1,11 +1,11 @@
 #include <gmock/gmock.h>
 
 #include <cmath>
-#include <gravity_compensation/gravity_model.hpp>
+#include <dynamics/gravity_model.hpp>
 #include <stdexcept>
 
-using gravity_compensation::GravityModel;
-using gravity_compensation::ReadFile;
+using dynamics::GravityModel;
+using dynamics::ReadFile;
 
 namespace {
 

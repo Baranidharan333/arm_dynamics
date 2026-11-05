@@ -7,7 +7,7 @@ Same rig as dual_joint.launch.py, using dual_joint_1kg_position.urdf (same robot
 the ros2_control block runs both motors in 'posvel' instead of 'mit'):
   - the motor's own position loop (its internal gains, not kp/kd) tracks the target,
   - the velocity field is the speed limit for the move,
-  - no torque feedforward, so gravity_torque_node is not started.
+  - no torque feedforward, so gravity_compensation_node is not started.
 
 Pipeline:
     joint_cmd GUI (joint_state_publisher_gui -> /joint_cmd, one slider per joint)

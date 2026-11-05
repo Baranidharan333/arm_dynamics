@@ -1,5 +1,5 @@
-# gravity_compensation gravity_torque_node for the two-joint rig (dual_joint_1kg.urdf).
-gravity_torque_node:
+# dynamics gravity_compensation_node for the two-joint rig (dual_joint_1kg.urdf).
+gravity_compensation_node:
   ros__parameters:
     root_link: base_link
     # Chain base_link -> arm_link -> motor2_link -> arm2_link; load_link hangs below arm2_link
@@ -11,3 +11,4 @@ gravity_torque_node:
     #   joint2: 4.9038 * sin(q1 + q2)                     (max ~4.9 Nm)
     # Can be changed live.
     gravity_scale: 1.0
+    # Ramp, feedforward_scale, inertia/coriolis scales: dynamics/config/feedforward.yaml

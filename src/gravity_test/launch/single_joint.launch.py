@@ -5,9 +5,11 @@
 
 Pipeline:
     /robot_description + /joint_states
-      -> gravity_torque_node (gravity_compensation, KDL) -> /gravity_torque
+      + /joint_desired (limited target p, v, a from joint_cmd)
+      -> gravity_compensation_node (dynamics, KDL)
+      -> /feedforward_torque = M(q_d) ddq_d + C(q_d, dq_d) dq_d + G(q)
     joint_cmd GUI (joint_state_publisher_gui -> /joint_cmd)
-      -> joint_cmd node (rate limit + /gravity_torque feedforward)
+      -> joint_cmd node (rate limit + /feedforward_torque)
       -> single_joint_mit_controller (posveleff_controllers/PosVelEffController)
       -> SingleJointSystem (hw_interface ArmHardwareInterface, MIT mode)
 
@@ -76,10 +78,15 @@ def launch_setup(context):
                        "--controller-manager", "/controller_manager"],
         ),
         Node(
-            package="gravity_compensation",
-            executable="gravity_torque_node",
+            package="dynamics",
+            executable="gravity_compensation_node",
             output="screen",
-            parameters=[os.path.join(pkg, "config", "single_joint_gravity_torque.yaml")],
+            # Feedforward tuning (ramp, scales) first, then this rig's chain.
+            parameters=[
+                os.path.join(get_package_share_directory("dynamics"), "config",
+                             "feedforward.yaml"),
+                os.path.join(pkg, "config", "single_joint_gravity_torque.yaml"),
+            ],
             condition=IfCondition(LaunchConfiguration("gravity")),
         ),
         Node(
@@ -87,7 +94,7 @@ def launch_setup(context):
             executable="joint_cmd",
             output="screen",
             parameters=[{
-                "gravity_enabled": LaunchConfiguration("gravity").perform(context).lower()
+                "feedforward_enabled": LaunchConfiguration("gravity").perform(context).lower()
                 == "true",
             }],
         ),
@@ -115,7 +122,7 @@ def generate_launch_description():
         DeclareLaunchArgument("mock_initial_position", default_value="0.0",
                               description="Mock joint position at start [rad]."),
         DeclareLaunchArgument("gravity", default_value="true",
-                              description="Run gravity_torque_node and add its torque in "
+                              description="Run gravity_compensation_node and add its feedforward torque in "
                                           "joint_cmd."),
         DeclareLaunchArgument("gui", default_value="true",
                               description="Start the joint_cmd slider GUI."),

@@ -1,5 +1,5 @@
-# gravity_compensation gravity_torque_node for the single-joint rig.
-gravity_torque_node:
+# dynamics gravity_compensation_node for the single-joint rig.
+gravity_compensation_node:
   ros__parameters:
     root_link: base_link
     # load_link hangs below arm_link and is included.
@@ -7,3 +7,4 @@ gravity_torque_node:
     gravity_vector: [0.0, 0.0, -9.81]
     # 1.0 = 100% of the model torque (4.9038 * sin(q) Nm). Can be changed live.
     gravity_scale: 1.0
+    # Ramp, feedforward_scale, inertia/coriolis scales: dynamics/config/feedforward.yaml

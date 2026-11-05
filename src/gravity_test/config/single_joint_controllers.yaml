@@ -2,7 +2,7 @@
 # Controllers for the single-joint rig (single_joint_1kg.urdf, SingleJointSystem).
 #
 # single_joint_mit_controller is fed by the joint_cmd node: limited /joint_cmd position plus
-# the /gravity_torque feedforward from gravity_compensation's gravity_torque_node.
+# the /feedforward_torque from dynamics' gravity_compensation_node.
 
 controller_manager:
   ros__parameters:

@@ -17,7 +17,7 @@
   <exec_depend>trajectory_msgs</exec_depend>
 
   <exec_depend>controller_manager</exec_depend>
-  <exec_depend>gravity_compensation</exec_depend>
+  <exec_depend>dynamics</exec_depend>
   <exec_depend>hw_interface</exec_depend>
   <exec_depend>joint_state_broadcaster</exec_depend>
   <exec_depend>joint_state_publisher_gui</exec_depend>

@@ -2,7 +2,7 @@
 # Controllers for the two-joint rig (dual_joint_1kg.urdf, DualJointSystem).
 #
 # One PosVelEffController per joint, so each joint gets its own joint_cmd node instance
-# (limited /joint_cmd position plus the /gravity_torque feedforward for that joint).
+# (limited /joint_cmd position plus the /feedforward_torque for that joint).
 
 controller_manager:
   ros__parameters:

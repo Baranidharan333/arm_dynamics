@@ -38,6 +38,11 @@ ros2 service call /DualJointSystem/set_motor_gains hw_interface/srv/SetMotorGain
   "{motor_ids: [1, 2], kp: [40.0, 40.0], kd: [1.2, 1.2]}"
 
 
+
+ros2 service call /DualJointSystem/set_motor_gains hw_interface/srv/SetMotorGains \
+  "{motor_ids: [1, 2], kp: [100.0, 60.0], kd: [2.0, 1.5]}"
+
+
 source ~/gravity/install/setup.bash
 ros2 run gravity_test joint_cmd --ros-args -p gravity_enabled:=false
 

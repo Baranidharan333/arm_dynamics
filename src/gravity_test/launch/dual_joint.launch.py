@@ -8,9 +8,11 @@ Command vs state per joint: run joint_analyzer separately
 
 Pipeline:
     /robot_description + /joint_states
-      -> gravity_torque_node (gravity_compensation, KDL) -> /gravity_torque (joint1, joint2)
+      + /joint_desired (limited targets p, v, a from joint1_cmd / joint2_cmd)
+      -> gravity_compensation_node (dynamics, KDL)
+      -> /feedforward_torque = M(q_d) ddq_d + C(q_d, dq_d) dq_d + G(q) (joint1, joint2)
     joint_cmd GUI (joint_state_publisher_gui -> /joint_cmd, one slider per joint)
-      -> joint1_cmd / joint2_cmd (joint_cmd nodes: rate limit + /gravity_torque feedforward)
+      -> joint1_cmd / joint2_cmd (joint_cmd nodes: rate limit + /feedforward_torque)
       -> joint1_mit_controller / joint2_mit_controller (posveleff_controllers/PosVelEffController)
       -> DualJointSystem (hw_interface ArmHardwareInterface, MIT mode, motor IDs 1 and 2)
 
@@ -28,7 +30,8 @@ from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
 # Per joint: hw_interface 'direction' (joint_cmd's effort_sign must match it) and the
-# |effort| clamp in joint_cmd. Peak gravity torque is ~12.4 Nm on joint1, ~4.9 Nm on joint2.
+# |effort| clamp in joint_cmd. Peak gravity torque is ~12.4 Nm on joint1, ~4.9 Nm on joint2;
+# inertia adds up to ~M * max_acceleration on top while the target accelerates.
 JOINTS = {
     "joint1": {"effort_sign": -1.0, "max_effort": 13.0},
     "joint2": {"effort_sign": -1.0, "max_effort": 5.5},
@@ -70,7 +73,7 @@ def launch_setup(context):
             parameters=[{
                 "joint_name": joint,
                 "controller_topic": f"/{joint}_mit_controller/joint_trajectory",
-                "gravity_enabled": gravity,
+                "feedforward_enabled": gravity,
                 "effort_sign": cfg["effort_sign"],
                 "max_effort": cfg["max_effort"],
             }],
@@ -104,10 +107,15 @@ def launch_setup(context):
                        "joint2_mit_controller", "--controller-manager", "/controller_manager"],
         ),
         Node(
-            package="gravity_compensation",
-            executable="gravity_torque_node",
+            package="dynamics",
+            executable="gravity_compensation_node",
             output="screen",
-            parameters=[os.path.join(pkg, "config", "dual_joint_gravity_torque.yaml")],
+            # Feedforward tuning (ramp, scales) first, then this rig's chain.
+            parameters=[
+                os.path.join(get_package_share_directory("dynamics"), "config",
+                             "feedforward.yaml"),
+                os.path.join(pkg, "config", "dual_joint_gravity_torque.yaml"),
+            ],
             condition=IfCondition(LaunchConfiguration("gravity")),
         ),
         *joint_cmd_nodes,
@@ -137,7 +145,7 @@ def generate_launch_description():
         DeclareLaunchArgument("mock_initial_position", default_value="0.0",
                               description="Mock position of both joints at start [rad]."),
         DeclareLaunchArgument("gravity", default_value="true",
-                              description="Run gravity_torque_node and add its torque in "
+                              description="Run gravity_compensation_node and add its feedforward torque in "
                                           "joint_cmd."),
         DeclareLaunchArgument("gui", default_value="true",
                               description="Start the joint_cmd slider GUI."),
